@@ -1,20 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { PerfectScrollbarConfigInterface,PerfectScrollbarComponent, PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
+import {Component, OnInit} from '@angular/core';
+import {PerfectScrollbarConfigInterface} from 'ngx-perfect-scrollbar';
 
 @Component({
-	selector: 'app-side-bar',
-	templateUrl: './SideBar.component.html',
-	styleUrls: ['./SideBar.component.scss']
+    selector: 'app-side-bar',
+    templateUrl: './SideBar.component.html',
+    styleUrls: ['./SideBar.component.scss']
 })
 
 export class SideBarComponent implements OnInit {
 
-	public config : PerfectScrollbarConfigInterface = {};
+    public config: PerfectScrollbarConfigInterface = {};
 
-	constructor() { }
+    constructor() {
+    }
 
-	ngOnInit() {
-	}
+    ngOnInit() {
+    }
 
 }
-	

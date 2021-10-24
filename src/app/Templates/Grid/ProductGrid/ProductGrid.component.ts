@@ -1,62 +1,65 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'embryo-ProductGrid',
-  templateUrl: './ProductGrid.component.html',
-  styleUrls: ['./ProductGrid.component.scss']
+    selector: 'embryo-ProductGrid',
+    templateUrl: './ProductGrid.component.html',
+    styleUrls: ['./ProductGrid.component.scss']
 })
 export class ProductGridComponent implements OnInit {
 
-   @Input() products : any ;
+    @Input() products: any;
 
-   @Input() currency : string;
+    @Input() currency: string;
 
-   @Input() gridLength : any;
+    @Input() gridLength: any;
 
-   @Input() gridThree : boolean = false;
+    @Input() gridThree = false;
 
-   @Output() addToCart: EventEmitter<any> = new EventEmitter();
+    @Output() addToCart: EventEmitter<any> = new EventEmitter();
 
-   @Output() addToWishList: EventEmitter<any> = new EventEmitter();
+    @Output() addToWishList: EventEmitter<any> = new EventEmitter();
 
-   loaded = false;
-   lg     = 25;
-   xl     = 25;
+    loaded = false;
+    lg = 25;
+    xl = 25;
 
-   trackByObjectID(index, hit) {
-      return hit.objectID;
-   }
+    constructor() {
+        console.log(this.products);
+    }
 
-   constructor() { }
+    trackByObjectID(index, hit) {
+        return hit.objectID;
+    }
 
-   ngOnInit() {
+    ngOnInit() {
+        console.log(this.products);
+        if (this.gridThree) {
+            this.lg = 33;
+            this.xl = 33;
+        }
+    }
 
-      if(this.gridThree) {
-         this.lg = 33;
-         this.xl = 33;
-      }
-   }
+    public addToCartProduct(value: any) {
+        this.addToCart.emit(value);
+    }
 
-   public addToCartProduct(value:any) {
-      this.addToCart.emit(value);
-   }
+    public onLoad() {
+        console.log(this.products);
+        this.loaded = true;
+    }
 
-   public onLoad() {
-      this.loaded = true;
-   }
+    public productAddToWishlist(value: any, parentClass) {
+        if (!(document.getElementById(parentClass).classList.contains('wishlist-active'))) {
+            const element = document.getElementById(parentClass).className += ' wishlist-active';
+        }
+        this.addToWishList.emit(value);
+    }
 
-   public productAddToWishlist(value:any, parentClass) {
-      if(!(document.getElementById(parentClass).classList.contains('wishlist-active'))){
-         let element = document.getElementById(parentClass).className += " wishlist-active";
-      }
-      this.addToWishList.emit(value);
-   }
-
-   public checkCartAlready(singleProduct) {
-      let products = JSON.parse(localStorage.getItem("cart_item")) || [];
-      if (!products.some((item) => item.name == singleProduct.name)) {
-         return true;
-      }
-   }
+    public checkCartAlready(singleProduct) {
+        const products = JSON.parse(localStorage.getItem('cart_item')) || [];
+        if (!products.some((item) => item.name == singleProduct.name)) {
+            return true;
+        }
+    }
 
 }

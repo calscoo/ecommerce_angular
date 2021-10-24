@@ -1,20 +1,20 @@
-import { Directive, HostListener, Inject } from '@angular/core';
+import {Directive, HostListener, Inject} from '@angular/core';
 
-import { MenuToggleLinkDirective } from './MenuToggleLink.directive';
+import {MenuToggleLinkDirective} from './MenuToggleLink.directive';
 
 @Directive({
-  selector: '[menuToggle]'
+    selector: '[menuToggle]'
 })
 export class MenuToggleAnchorDirective {
 
-  protected navlink: MenuToggleLinkDirective;
+    protected navlink: MenuToggleLinkDirective;
 
-  constructor( @Inject(MenuToggleLinkDirective) navlink: MenuToggleLinkDirective) {
-    this.navlink = navlink;
-  }
+    constructor(@Inject(MenuToggleLinkDirective) navlink: MenuToggleLinkDirective) {
+        this.navlink = navlink;
+    }
 
-  @HostListener('click', ['$event'])
-  onClick(e: any) {
-    this.navlink.toggle();
-  }
+    @HostListener('click', ['$event'])
+    onClick(e: any) {
+        this.navlink.toggle();
+    }
 }

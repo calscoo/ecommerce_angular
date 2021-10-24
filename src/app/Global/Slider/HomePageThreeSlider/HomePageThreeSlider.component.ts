@@ -1,84 +1,84 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import {Component, Input, OnChanges, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'embryo-HomePageThreeSlider',
-  templateUrl: './HomePageThreeSlider.component.html',
-  styleUrls: ['./HomePageThreeSlider.component.scss']
+    selector: 'embryo-HomePageThreeSlider',
+    templateUrl: './HomePageThreeSlider.component.html',
+    styleUrls: ['./HomePageThreeSlider.component.scss']
 })
 export class HomePageThreeSliderComponent implements OnInit, OnChanges {
 
-   @Input() isRTL : boolean = false;
+    @Input() isRTL = false;
 
-   slideConfig : any;
+    slideConfig: any;
 
-   slides : any = [
-      {
-         img         : "assets/images/h-slider-1.jpg",
-         content     : "2019 Latest Collection",
-         heading_one : "New Fashion Collection",
-        
-      },
-      {
-         img         : "assets/images/h-slider-2.jpg",
-         content     : "2019 Latest Collection",
-         heading_one : "Summer Time Collection",
-   
-      }, 
-      {
-         img         : "assets/images/h-slider-3.jpg",
-         content     : "2019 Latest Collection",
-         heading_one : "Men's Suiting and Clothing",
-         
-      }
-   ]
+    slideSpeed: 5000;
 
-   constructor() { }
+    slides: any = [
+        {
+            img: 'assets/images/h-slider-1.jpg',
+            content: '2019 Latest Collection',
+            heading_one: 'New Fashion Collection',
+        },
+        {
+            img: 'assets/images/h-slider-2.jpg',
+            content: '2019 Latest Collection',
+            heading_one: 'Summer Time Collection',
+        },
+        {
+            img: 'assets/images/h-slider-3.jpg',
+            content: '2019 Latest Collection',
+            heading_one: 'Men\'s Suiting and Clothing',
+        }
+    ];
 
-   ngOnInit() {
-   }
+    constructor() {
+    }
 
-   ngOnChanges() {
-      this.slideConfig = {
-         infinite: true,
-         slidesToShow: 1,
-         slidesToScroll: 1,
-         autoplay: true,
-         autoplaySpeed: 2000,
-         dots: false,
-         rtl: this.isRTL,
-         responsive: [
-            {
-               breakpoint: 991,
-               settings: {
-                  arrows: false,
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  autoplay: true,
-                  autoplaySpeed: 2000
-               }
-            },
-            {
-               breakpoint: 768,
-               settings: {
-                  arrows: false,
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  autoplay: true,
-                  autoplaySpeed: 2000
-               }
-            },
-            {
-               breakpoint: 480,
-               settings: {
-                  arrows: false,
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  autoplay: true,
-                  autoplaySpeed: 2000
-               }
-            }
-         ]
-      };
-   }
+    ngOnInit() {
+    }
+
+    ngOnChanges() {
+        this.slideConfig = {
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: this.slideSpeed,
+            dots: false,
+            rtl: this.isRTL,
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: this.slideSpeed
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: this.slideSpeed
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: this.slideSpeed
+                    }
+                }
+            ]
+        };
+    }
 
 }

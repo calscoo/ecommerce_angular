@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'embryo-Register',
-  templateUrl: './Register.component.html',
-  styleUrls: ['./Register.component.scss']
+    selector: 'embryo-Register',
+    templateUrl: './Register.component.html',
+    styleUrls: ['./Register.component.scss']
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

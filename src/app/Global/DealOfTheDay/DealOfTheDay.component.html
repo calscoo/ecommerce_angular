@@ -19,7 +19,7 @@
          <span class="accent-color">Now Only {{singleProduct?.discount_price | currency:currency}}</span>
        </p>
        <p>{{singleProduct?.description}}</p>
-       
+
        <embryo-TimerCountDown [dateTime]="counterDateTime"></embryo-TimerCountDown>
        <div>
          <button mat-raised-button color="accent" [routerLink]="['/products', singleProduct?.type, singleProduct?.id]">Shop Now</button>

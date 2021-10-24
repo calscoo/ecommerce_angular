@@ -1,53 +1,51 @@
-import {
-  Directive, HostBinding, Inject, Input, OnInit, OnDestroy
-} from '@angular/core';
+import {Directive, HostBinding, Inject, Input, OnDestroy, OnInit} from '@angular/core';
 
-import { MenuToggleDirective } from './MenuToggle.directive';
+import {MenuToggleDirective} from './MenuToggle.directive';
 
 @Directive({
-  selector: '[menuToggleLink]'
+    selector: '[menuToggleLink]'
 })
 export class MenuToggleLinkDirective implements OnInit, OnDestroy {
 
-  @Input() public group: any;
+    @Input() public group: any;
+    protected nav: MenuToggleDirective;
 
-  @HostBinding('class.open')
-  @Input()
-  get open(): boolean {
-    return this._open;
-  }
-
-  set open(value: boolean) {
-    this._open = value;
-    if (value) {
-      this.nav.closeOtherLinks(this);
+    public constructor(@Inject(MenuToggleDirective) nav: MenuToggleDirective) {
+        this.nav = nav;
     }
-  }
 
-  protected _open: boolean;
-  protected nav: MenuToggleDirective;
+    protected _open: boolean;
 
-  public constructor(@Inject(MenuToggleDirective) nav: MenuToggleDirective) {
-    this.nav = nav;
-  }
-
-  public ngOnInit(): any {
-    this.nav.addLink(this);
-
-    if (this.group) {
-      const routeUrl = this.nav.getUrl();
-      const currentUrl = routeUrl.split('/');
-      if (currentUrl.indexOf( this.group ) > 0) {
-        this.toggle();
-      }
+    @HostBinding('class.open')
+    @Input()
+    get open(): boolean {
+        return this._open;
     }
-  }
 
-  public ngOnDestroy(): any {
-    this.nav.removeGroup(this);
-  }
+    set open(value: boolean) {
+        this._open = value;
+        if (value) {
+            this.nav.closeOtherLinks(this);
+        }
+    }
 
-  public toggle(): any {
-    this.open = !this.open;
-  }
+    public ngOnInit(): any {
+        this.nav.addLink(this);
+
+        if (this.group) {
+            const routeUrl = this.nav.getUrl();
+            const currentUrl = routeUrl.split('/');
+            if (currentUrl.indexOf(this.group) > 0) {
+                this.toggle();
+            }
+        }
+    }
+
+    public ngOnDestroy(): any {
+        this.nav.removeGroup(this);
+    }
+
+    public toggle(): any {
+        this.open = !this.open;
+    }
 }

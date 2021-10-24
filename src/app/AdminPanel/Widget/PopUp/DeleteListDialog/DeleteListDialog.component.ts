@@ -1,25 +1,23 @@
-import { Component, OnInit ,Input, Output, EventEmitter} from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { of } from 'rxjs/observable/of';
-import { delay } from 'rxjs/operators';
+import {Component, OnInit} from '@angular/core';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
-   selector: 'app-delete-list-dialog',
-   templateUrl: './DeleteListDialog.component.html',
-   styleUrls: ['./DeleteListDialog.component.scss']
-   })
+    selector: 'app-delete-list-dialog',
+    templateUrl: './DeleteListDialog.component.html',
+    styleUrls: ['./DeleteListDialog.component.scss']
+})
 
 export class DeleteListDialogComponent implements OnInit {
-   
-   data : string;
 
-   constructor(public dialogRef : MatDialogRef<DeleteListDialogComponent>){
-   } 
+    data: string;
 
-   ngOnInit() {
-   }
+    constructor(public dialogRef: MatDialogRef<DeleteListDialogComponent>) {
+    }
 
-   yes(){
-      this.dialogRef.close("yes");
-   }
+    ngOnInit() {
+    }
+
+    yes() {
+        this.dialogRef.close('yes');
+    }
 }

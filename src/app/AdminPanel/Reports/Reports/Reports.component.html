@@ -31,7 +31,7 @@
 <ng-container *ngIf="tableTabData;else empty">
    <mat-card class="p-3">
       <mat-tab-group class="table-tab-list" color="accent">
-         <mat-tab label="{{'Transaction List' | translate}}">
+         <mat-tab label="{{'Orders' | translate}}">
             <div fxFlex.gt-md="100" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
                <div class="transactiion-list table-list-wrap">
                   <div class="table-responsive-x">  
@@ -79,109 +79,109 @@
                <!-- table list wrap -->
             </div>
          </mat-tab>
-         <mat-tab label="{{'Transfer Report' | translate}}">
-            <div fxFlex.gt-md="100" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
-               <div class="invoice-list table-list-wrap">
-                  <div class="overflow-hidden">
-                     <div class="table-responsive-x">  
-                        <table class="w-100" mat-table [dataSource]="tableTabData.transferreport">
-                           <ng-container matColumnDef="transid">
-                              <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Transfer Id</th>
-                              <td class="text-nowrap px-3" mat-cell *matCellDef="let element">
-                                 <div>{{element.transid}}</div>
-                              </td>
-                           </ng-container>
-                           <ng-container matColumnDef="date">
-                              <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Date</th>
-                              <td class="text-nowrap px-3" mat-cell *matCellDef="let element">{{element.date | date:'mediumDate'}} </td>
-                           </ng-container>
-                           <ng-container matColumnDef="account">
-                              <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Account</th>
-                              
-                              <td class="text-nowrap px-3" mat-cell *matCellDef="let element">{{element.account}}</td>
-                           </ng-container>
-                           <ng-container matColumnDef="type">
-                              <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Type</th>
-                              <td class="text-nowrap px-3" mat-cell *matCellDef="let element">
-                                 <mat-chip-list>
-                                    <mat-chip color="{{element.typeColor}}" selected>{{element.type}}</mat-chip>
-                                 </mat-chip-list>
-                              </td>
-                           </ng-container>
-                           <ng-container matColumnDef="amount">
-                              <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Amount</th>
-                              <td class="text-nowrap px-3" mat-cell *matCellDef="let element">{{element.amount|currency}} </td>
-                           </ng-container>
-                           <ng-container matColumnDef="balance">
-                              <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Balance</th>
-                              <td class="text-nowrap px-3" mat-cell *matCellDef="let element">{{element.balance|currency}} </td>
-                           </ng-container>
-                           <ng-container matColumnDef="status">
-                              <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Status</th>
-                              <td class="text-nowrap px-3" mat-cell *matCellDef="let element">
-                                 <mat-chip-list>
-                                    <mat-chip color="{{element.statusColor}}" selected>{{element.status}}</mat-chip>
-                                 </mat-chip-list> 
-                              </td>
-                           </ng-container>
-                           <tr mat-header-row *matHeaderRowDef="displayedTransferColumns"></tr>
-                           <tr mat-row *matRowDef="let row; columns: displayedTransferColumns"></tr>
-                        </table>
-                     </div>  
-                  </div>   
-                  <!-- table responsive-->
-               </div>
-               <!--invoice list-->
-            </div> 
-         </mat-tab>
-         <mat-tab label="{{'Expense Category' | translate}}">
-            <div fxFlex.gt-md="100" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
-               <div class="Expense-category-list table-list-wrap">
-                  <div class="table-responsive-x">  
-                     <table class="w-100" mat-table [dataSource]="tableTabData.expenseCategory">
-                        <ng-container matColumnDef="itmNo">
-                           <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Item No</th>
-                           <td class="text-nowrap px-3" mat-cell *matCellDef="let element">
-                              <div>{{element.itmNo}}</div>
-                           </td>
-                        </ng-container>
-                        <ng-container matColumnDef="date">
-                           <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Date</th>
-                           <td class="text-nowrap px-3" mat-cell *matCellDef="let element">{{element.date | date:'mediumDate'}} </td>
-                        </ng-container>
-                        <ng-container matColumnDef="type">
-                           <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Type</th>
-                           <td class="text-nowrap px-3" mat-cell *matCellDef="let element">
-                              <mat-chip-list>
-                                 <mat-chip color="{{element.typeColor}}" selected>{{element.type}}</mat-chip>
-                              </mat-chip-list> 
-                           </td>   
-                        </ng-container>
-                        <ng-container matColumnDef="companyName">
-                           <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Company Name</th>
-                           <td class="text-nowrap px-3" mat-cell *matCellDef="let element">{{element.companyName}} </td>
-                        </ng-container>
-                        <ng-container matColumnDef="amount">
-                           <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Amount</th>
-                           <td class="text-nowrap px-3" mat-cell *matCellDef="let element">{{element.amount|currency}} </td>
-                        </ng-container>
-                        <ng-container matColumnDef="status">
-                           <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Status</th>
-                           <td class="text-nowrap px-3" mat-cell *matCellDef="let element">
-                              <mat-chip-list>
-                                 <mat-chip color="{{element.statusColor}}" selected>{{element.status}}</mat-chip>
-                              </mat-chip-list> 
-                           </td>
-                        </ng-container>
-                        <tr mat-header-row *matHeaderRowDef="displayedExpenseColumns"></tr>
-                        <tr mat-row *matRowDef="let row; columns: displayedExpenseColumns"></tr>
-                     </table>
-                  </div>  
-                  <!-- table responsive -->
-               </div>
-               <!-- Expense-category-list-->
-            </div>   
-         </mat-tab>
+<!--         <mat-tab label="{{'Transfer Report' | translate}}">-->
+<!--            <div fxFlex.gt-md="100" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">-->
+<!--               <div class="invoice-list table-list-wrap">-->
+<!--                  <div class="overflow-hidden">-->
+<!--                     <div class="table-responsive-x">  -->
+<!--                        <table class="w-100" mat-table [dataSource]="tableTabData.transferreport">-->
+<!--                           <ng-container matColumnDef="transid">-->
+<!--                              <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Transfer Id</th>-->
+<!--                              <td class="text-nowrap px-3" mat-cell *matCellDef="let element">-->
+<!--                                 <div>{{element.transid}}</div>-->
+<!--                              </td>-->
+<!--                           </ng-container>-->
+<!--                           <ng-container matColumnDef="date">-->
+<!--                              <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Date</th>-->
+<!--                              <td class="text-nowrap px-3" mat-cell *matCellDef="let element">{{element.date | date:'mediumDate'}} </td>-->
+<!--                           </ng-container>-->
+<!--                           <ng-container matColumnDef="account">-->
+<!--                              <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Account</th>-->
+<!--                              -->
+<!--                              <td class="text-nowrap px-3" mat-cell *matCellDef="let element">{{element.account}}</td>-->
+<!--                           </ng-container>-->
+<!--                           <ng-container matColumnDef="type">-->
+<!--                              <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Type</th>-->
+<!--                              <td class="text-nowrap px-3" mat-cell *matCellDef="let element">-->
+<!--                                 <mat-chip-list>-->
+<!--                                    <mat-chip color="{{element.typeColor}}" selected>{{element.type}}</mat-chip>-->
+<!--                                 </mat-chip-list>-->
+<!--                              </td>-->
+<!--                           </ng-container>-->
+<!--                           <ng-container matColumnDef="amount">-->
+<!--                              <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Amount</th>-->
+<!--                              <td class="text-nowrap px-3" mat-cell *matCellDef="let element">{{element.amount|currency}} </td>-->
+<!--                           </ng-container>-->
+<!--                           <ng-container matColumnDef="balance">-->
+<!--                              <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Balance</th>-->
+<!--                              <td class="text-nowrap px-3" mat-cell *matCellDef="let element">{{element.balance|currency}} </td>-->
+<!--                           </ng-container>-->
+<!--                           <ng-container matColumnDef="status">-->
+<!--                              <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Status</th>-->
+<!--                              <td class="text-nowrap px-3" mat-cell *matCellDef="let element">-->
+<!--                                 <mat-chip-list>-->
+<!--                                    <mat-chip color="{{element.statusColor}}" selected>{{element.status}}</mat-chip>-->
+<!--                                 </mat-chip-list> -->
+<!--                              </td>-->
+<!--                           </ng-container>-->
+<!--                           <tr mat-header-row *matHeaderRowDef="displayedTransferColumns"></tr>-->
+<!--                           <tr mat-row *matRowDef="let row; columns: displayedTransferColumns"></tr>-->
+<!--                        </table>-->
+<!--                     </div>  -->
+<!--                  </div>   -->
+<!--                  &lt;!&ndash; table responsive&ndash;&gt;-->
+<!--               </div>-->
+<!--               &lt;!&ndash;invoice list&ndash;&gt;-->
+<!--            </div> -->
+<!--         </mat-tab>-->
+<!--         <mat-tab label="{{'Expense Category' | translate}}">-->
+<!--            <div fxFlex.gt-md="100" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">-->
+<!--               <div class="Expense-category-list table-list-wrap">-->
+<!--                  <div class="table-responsive-x">  -->
+<!--                     <table class="w-100" mat-table [dataSource]="tableTabData.expenseCategory">-->
+<!--                        <ng-container matColumnDef="itmNo">-->
+<!--                           <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Item No</th>-->
+<!--                           <td class="text-nowrap px-3" mat-cell *matCellDef="let element">-->
+<!--                              <div>{{element.itmNo}}</div>-->
+<!--                           </td>-->
+<!--                        </ng-container>-->
+<!--                        <ng-container matColumnDef="date">-->
+<!--                           <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Date</th>-->
+<!--                           <td class="text-nowrap px-3" mat-cell *matCellDef="let element">{{element.date | date:'mediumDate'}} </td>-->
+<!--                        </ng-container>-->
+<!--                        <ng-container matColumnDef="type">-->
+<!--                           <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Type</th>-->
+<!--                           <td class="text-nowrap px-3" mat-cell *matCellDef="let element">-->
+<!--                              <mat-chip-list>-->
+<!--                                 <mat-chip color="{{element.typeColor}}" selected>{{element.type}}</mat-chip>-->
+<!--                              </mat-chip-list> -->
+<!--                           </td>   -->
+<!--                        </ng-container>-->
+<!--                        <ng-container matColumnDef="companyName">-->
+<!--                           <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Company Name</th>-->
+<!--                           <td class="text-nowrap px-3" mat-cell *matCellDef="let element">{{element.companyName}} </td>-->
+<!--                        </ng-container>-->
+<!--                        <ng-container matColumnDef="amount">-->
+<!--                           <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Amount</th>-->
+<!--                           <td class="text-nowrap px-3" mat-cell *matCellDef="let element">{{element.amount|currency}} </td>-->
+<!--                        </ng-container>-->
+<!--                        <ng-container matColumnDef="status">-->
+<!--                           <th class="text-nowrap px-3" mat-header-cell *matHeaderCellDef>Status</th>-->
+<!--                           <td class="text-nowrap px-3" mat-cell *matCellDef="let element">-->
+<!--                              <mat-chip-list>-->
+<!--                                 <mat-chip color="{{element.statusColor}}" selected>{{element.status}}</mat-chip>-->
+<!--                              </mat-chip-list> -->
+<!--                           </td>-->
+<!--                        </ng-container>-->
+<!--                        <tr mat-header-row *matHeaderRowDef="displayedExpenseColumns"></tr>-->
+<!--                        <tr mat-row *matRowDef="let row; columns: displayedExpenseColumns"></tr>-->
+<!--                     </table>-->
+<!--                  </div>  -->
+<!--                  &lt;!&ndash; table responsive &ndash;&gt;-->
+<!--               </div>-->
+<!--               &lt;!&ndash; Expense-category-list&ndash;&gt;-->
+<!--            </div>   -->
+<!--         </mat-tab>-->
       </mat-tab-group>
       <!--mat-tab-group-->
    </mat-card>

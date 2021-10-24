@@ -1,45 +1,46 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'embryo-ProductCard',
-  templateUrl: './ProductCard.component.html',
-  styleUrls: ['./ProductCard.component.scss']
+    selector: 'embryo-ProductCard',
+    templateUrl: './ProductCard.component.html',
+    styleUrls: ['./ProductCard.component.scss']
 })
 export class ProductCardComponent implements OnInit {
 
-   @Input() product : any;
+    @Input() product: any;
 
-   @Input() index   : any;
+    @Input() index: any;
 
-   @Input() currency : string;
+    @Input() currency: string;
 
-   @Input() type  : string = '';
+    @Input() type = '';
 
-   @Output() addToCart: EventEmitter<any> = new EventEmitter();
+    @Output() addToCart: EventEmitter<any> = new EventEmitter();
 
-   @Output() addToWishlist: EventEmitter<any> = new EventEmitter();
+    @Output() addToWishlist: EventEmitter<any> = new EventEmitter();
 
-   constructor() { }
+    constructor() {
+    }
 
-   ngOnInit() {
-   }
+    ngOnInit() {
+    }
 
-   public addToCartProduct(value:any) {
-      this.addToCart.emit(value);
-   }
+    public addToCartProduct(value: any) {
+        this.addToCart.emit(value);
+    }
 
-   public productAddToWishlist(value:any, parentClass) {
-      if(!(document.getElementById(parentClass).classList.contains('wishlist-active'))){
-         let element = document.getElementById(parentClass).className += " wishlist-active";
-      }
-      this.addToWishlist.emit(value);
-   }
+    public productAddToWishlist(value: any, parentClass) {
+        if (!(document.getElementById(parentClass).classList.contains('wishlist-active'))) {
+            const element = document.getElementById(parentClass).className += ' wishlist-active';
+        }
+        this.addToWishlist.emit(value);
+    }
 
-   public checkCartAlready(singleProduct) {
-      let products = JSON.parse(localStorage.getItem("cart_item")) || [];
-      if (!products.some((item) => item.id == singleProduct.id)) {
-         return true;
-      }
-   }
+    public checkCartAlready(singleProduct) {
+        const products = JSON.parse(localStorage.getItem('cart_item')) || [];
+        if (!products.some((item) => item.id == singleProduct.id)) {
+            return true;
+        }
+    }
 
 }

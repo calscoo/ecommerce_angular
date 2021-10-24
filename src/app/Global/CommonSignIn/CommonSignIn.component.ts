@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'embryo-SignIn',
-  templateUrl: './CommonSignIn.component.html',
-  styleUrls: ['./CommonSignIn.component.scss']
+    selector: 'embryo-SignIn',
+    templateUrl: './CommonSignIn.component.html',
+    styleUrls: ['./CommonSignIn.component.scss']
 })
 export class CommonSignInComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
