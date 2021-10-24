@@ -1,2 +1,2 @@
 # ecommerce_angular
-Python - The frontend for the ecommerce application.
+Angular - The frontend for the ecommerce application.
