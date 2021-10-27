@@ -23,14 +23,6 @@ export class CTAGroupComponent implements OnInit {
         {
             img_path: 'assets/images/home2-slider-custom-2.png',
             route: '/products/men/5'
-        },
-        {
-            img_path: 'assets/images/home2-slider-custom-1.png',
-            route: '/products/gadgets/14'
-        },
-        {
-            img_path: 'assets/images/home2-slider-custom-2.png',
-            route: '/products/men/6'
         }
     ];
 

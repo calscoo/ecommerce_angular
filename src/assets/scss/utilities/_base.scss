@@ -135,12 +135,38 @@ img {
 }
 
 // Section gap class between the home page sections
+.section-gap-sm {
+  padding: 2rem 0;
+}
+
 .section-gap {
   padding: 5rem 0;
 }
 
 .section-gap-lg {
   padding: 7rem 0;
+}
+.section-gap-top-sm {
+  padding: 2rem 0 0 0;
+}
+
+.section-gap-top {
+  padding: 5rem 0 0 0;
+}
+
+.section-gap-top-lg {
+  padding: 7rem 0 0 0;
+}
+.section-gap-bottom-sm {
+  padding: 0 0 2rem 0;
+}
+
+.section-gap-bottom {
+  padding: 0 0 5rem 0;
+}
+
+.section-gap-bottom-lg {
+  padding: 0 0 7rem 0;
 }
 
 //position

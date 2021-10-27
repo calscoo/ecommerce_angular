@@ -21,7 +21,7 @@ export class HomeThreeComponent implements OnInit {
         slidesToShow: 4,
         slidesToScroll: 2,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 5000,
         dots: false,
         responsive: [
             {
@@ -55,7 +55,7 @@ export class HomeThreeComponent implements OnInit {
         slidesToShow: 4,
         slidesToScroll: 4,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 5000,
         dots: false,
         rtl: true,
         responsive: [

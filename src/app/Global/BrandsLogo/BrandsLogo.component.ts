@@ -58,7 +58,7 @@ export class BrandslogoComponent implements OnInit, OnChanges {
             slidesToShow: 5,
             slidesToScroll: 2,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 5000,
             rtl: this.isRTL,
             responsive: [
                 {
@@ -68,7 +68,7 @@ export class BrandslogoComponent implements OnInit, OnChanges {
                         slidesToShow: 4,
                         slidesToScroll: 2,
                         autoplay: true,
-                        autoplaySpeed: 2000
+                        autoplaySpeed: 5000
                     }
                 },
                 {
@@ -77,7 +77,7 @@ export class BrandslogoComponent implements OnInit, OnChanges {
                         centerMode: true,
                         slidesToShow: 1,
                         autoplay: true,
-                        autoplaySpeed: 2000
+                        autoplaySpeed: 5000
                     }
                 }
             ]

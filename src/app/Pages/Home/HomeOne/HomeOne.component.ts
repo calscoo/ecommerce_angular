@@ -18,7 +18,7 @@ export class HomeoneComponent implements OnInit, AfterViewChecked {
         slidesToShow: 4,
         slidesToScroll: 4,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 5000,
         dots: true,
         responsive: [
             {
@@ -52,7 +52,7 @@ export class HomeoneComponent implements OnInit, AfterViewChecked {
         slidesToShow: 4,
         slidesToScroll: 4,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 5000,
         dots: true,
         rtl: true,
         responsive: [
