@@ -7,19 +7,23 @@ import {EmbryoService} from '../../../Services/Embryo.service';
     templateUrl: './HomeOne.component.html',
     styleUrls: ['./HomeOne.component.scss']
 })
-export class HomeoneComponent implements OnInit, AfterViewChecked {
+export class HomeoneComponent implements OnInit {
 
-    blogList: any;
-    productReviews: any;
-    productsArray: any;
-    productsSliderData: any;
+    categories: any = {
+        clothing: [],
+        shoes: [],
+        accessories: [],
+        gadgets: []
+    };
+    products: any;
+    allProducts: any;
     newProductsSliderData: any;
     slideConfig = {
         slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 2,
         autoplay: true,
         autoplaySpeed: 5000,
-        dots: true,
+        dots: false,
         responsive: [
             {
                 breakpoint: 992,
@@ -27,6 +31,41 @@ export class HomeoneComponent implements OnInit, AfterViewChecked {
                     arrows: false,
                     slidesToShow: 2,
                     slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
+
+    rtlSlideConfig = {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        dots: false,
+        rtl: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 2
                 }
             },
             {
@@ -48,128 +87,64 @@ export class HomeoneComponent implements OnInit, AfterViewChecked {
         ]
     };
 
-    rtlSlideConfig = {
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        dots: true,
-        rtl: true,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-
-    constructor(public embryoService: EmbryoService,
-                private cdRef: ChangeDetectorRef) {
-        this.getFeaturedProducts();
-        this.getBlogList();
-        this.getProductRevies();
-
-        this.embryoService.featuredProductsSelectedTab = 0;
-        this.embryoService.newArrivalSelectedTab = 0;
+    constructor(public embryoService: EmbryoService) {
     }
 
     ngOnInit() {
+        this.getProducts();
     }
 
-    ngAfterViewChecked(): void {
-        this.cdRef.detectChanges();
+    public getProducts() {
+        this.embryoService.getProducts().valueChanges()
+            .subscribe(res => this.getProductsResponse(res));
     }
 
-    public getFeaturedProducts() {
-        this.embryoService.getProducts().valueChanges().subscribe(res => {
-            this.productsArray = res;
-        });
-    }
+    public getProductsResponse(res) {
+        this.products = res;
+        this.allProducts = ((res.men.concat(res.women)).concat(res.gadgets)).concat(res.accessories);
 
-    public getBlogList() {
-        this.embryoService.getBlogList().valueChanges().subscribe(res => {
-            this.blogList = res;
-        });
-    }
+        for (let product of this.allProducts) {
+            switch (product.category_type) {
+                case 'clothing':
+                    this.categories.clothing.push(product);
+                    break;
 
-    public addToCart(value) {
-        this.embryoService.addToCart(value);
-    }
+                case 'shoes':
+                    this.categories.shoes.push(product);
+                    break;
 
-    public getProductRevies() {
-        this.embryoService.getProductReviews().valueChanges().subscribe(res => {
-            this.productReviews = res;
-        });
-    }
+                case 'accessories':
+                    this.categories.accessories.push(product);
+                    break;
 
-    public addToWishlist(value) {
-        this.embryoService.addToWishlist(value);
-    }
+                case 'gadgets':
+                    this.categories.gadgets.push(product);
+                    break;
 
-    public onFeaturedSelectedTab(tabIndex) {
-        this.productsSliderData = null;
-        switch (tabIndex) {
-            case 0:
-                this.productsSliderData = this.productsArray.men;
-                break;
-
-            case 1:
-                this.productsSliderData = this.productsArray.women;
-                break;
-
-            case 2:
-                this.productsSliderData = this.productsArray.gadgets;
-                break;
-
-            case 3:
-                this.productsSliderData = this.productsArray.accessories;
-                break;
-
-            default:
-                // code...
-                break;
+                default:
+                    // code...
+                    break;
+            }
         }
-
-        return true;
     }
 
     public onNewArrivalsSelectedTab(tabIndex) {
         this.newProductsSliderData = null;
         switch (tabIndex) {
             case 0:
-                this.newProductsSliderData = this.productsArray.men;
+                this.newProductsSliderData = this.allProducts;
                 break;
 
             case 1:
-                this.newProductsSliderData = this.productsArray.women;
+                this.newProductsSliderData = this.products.men;
                 break;
 
             case 2:
-                this.newProductsSliderData = this.productsArray.gadgets;
+                this.newProductsSliderData = this.products.women;
                 break;
 
             case 3:
-                this.newProductsSliderData = this.productsArray.accessories;
+                this.newProductsSliderData = this.products.gadgets;
                 break;
 
             default:
@@ -179,4 +154,13 @@ export class HomeoneComponent implements OnInit, AfterViewChecked {
 
         return true;
     }
+
+    public addToCart(value) {
+        this.embryoService.addToCart(value);
+    }
+
+    public addToWishlist(value) {
+        this.embryoService.addToWishlist(value);
+    }
+
 }

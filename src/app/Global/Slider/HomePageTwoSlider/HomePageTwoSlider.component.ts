@@ -13,7 +13,7 @@ export class HomePageTwoSliderComponent implements OnInit, OnChanges {
 
     slideSpeed: 5000;
 
-    slides = [
+    slides: any = [
         {
             img: 'assets/images/home2-slider-custom-1.png',
             content: '<h4>New Arrival</h4><h1 class=\'text-main\'>Biggest Sale</h1><h1 class=\'text-bold mb-4\'>50% <sup class=\'bold-sup\'>Flat Off</sup></h1>'
