@@ -63,13 +63,6 @@ export class AdminPanelServiceService {
         return invoiceList;
     }
 
-    //getCollaborationContent method is used to get the Collaboration table data.
-    getCollaborationContent() {
-        let collaboration: any;
-        collaboration = this.db.list('collaborationData');
-        return collaboration;
-    }
-
     //seeList function is used to open the see Dialog Component.
     seeList() {
         let dialogRef: MatDialogRef<SeeListDialogComponent>;
