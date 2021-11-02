@@ -9,8 +9,10 @@ import {EmbryoService} from '../../../Services/Embryo.service';
 export class HeaderTwoComponent implements OnInit {
 
     popupResponse: any;
+    right: any;
 
     constructor(public embryoService: EmbryoService) {
+        this.right = 'rtl';
     }
 
     ngOnInit() {

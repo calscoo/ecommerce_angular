@@ -15,6 +15,7 @@ export class MainAdminPanelComponent implements OnInit {
 
     deviceInfo: any = null;
     isMobile = false;
+    right: any;
     isMobileStatus: boolean;
     layout: any = 'ltr';
     rtlStatus = false;
@@ -29,6 +30,7 @@ export class MainAdminPanelComponent implements OnInit {
                 private activatedRoute: ActivatedRoute,
                 private deviceService: DeviceDetectorService,
                 private media: MediaObserver) {
+        this.right = 'rtl';
     }
 
     ngOnInit() {

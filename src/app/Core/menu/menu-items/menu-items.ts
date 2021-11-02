@@ -22,25 +22,25 @@ const HeaderOneItems = [
         state: '',
         name: 'SHOP',
         type: 'sub',
-        icon: 'pages',
+        icon: 'storefront',
         children: [
             {
                 state: 'products/',
-                name: 'PRODUCTS',
+                name: 'Products',
                 type: 'link',
-                icon: 'arrow_right_alt'
+                icon: 'photo_library'
             },
             {
                 state: 'cart',
-                name: 'CART',
+                name: 'Cart',
                 type: 'link',
-                icon: 'arrow_right_alt'
+                icon: 'shopping_cart'
             },
             {
                 state: 'checkout',
-                name: 'CHECKOUT',
+                name: 'Checkout',
                 type: 'link',
-                icon: 'arrow_right_alt'
+                icon: 'shopping_bag'
             }
         ]
     },
@@ -48,7 +48,7 @@ const HeaderOneItems = [
         state: 'admin-panel',
         name: 'ADMIN PANEL',
         type: 'link',
-        icon: 'perm_identity'
+        icon: 'admin_panel_settings'
     }
 ];
 

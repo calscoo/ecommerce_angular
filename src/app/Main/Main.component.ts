@@ -17,7 +17,8 @@ import {Meta, Title} from '@angular/platform-browser';
 export class MainComponent implements OnInit {
 
     timer = 0;
-    isRtl: any;
+    right: any;
+    left: any;
     currentUrl: any;
     private _dirChangeSubscription = Subscription.EMPTY;
 
@@ -44,11 +45,8 @@ export class MainComponent implements OnInit {
             }
         ]);
 
-        if (this.embryoService.isDirectionRtl) {
-            this.isRtl = 'rtl';
-        } else {
-            this.isRtl = 'ltr';
-        }
+        this.right = 'rtl';
+        this.left = 'ltr';
 
         this.router.events
             .subscribe((event) => {
@@ -83,11 +81,11 @@ export class MainComponent implements OnInit {
     }
 
     public changeDirection() {
-        if (this.isRtl == 'rtl') {
-            this.isRtl = 'ltr';
+        if (this.left == 'rtl') {
+            this.left = 'ltr';
             this.embryoService.isDirectionRtl = false;
         } else {
-            this.isRtl = 'rtl';
+            this.left = 'rtl';
             this.embryoService.isDirectionRtl = true;
         }
 

@@ -3,15 +3,13 @@
       <button class="" mat-mini-fab color="primary" mat-card-icon (click)="toggleSidebar()">
          <mat-icon>menu</mat-icon>
       </button>
+       <embryo-HeaderUserProfileDropdown></embryo-HeaderUserProfileDropdown>
    </div>
    <div fxFlex.xs="60" fxFlex.sm="60" fxFlex.md="50" fxFlex.lg="33%" fxFlex.xl="33%">
 		<span fxFlex></span>
-		<div class="list-flex user-tool">
-<!--         <div class="list-flex">-->
-<!--            <embryo-LanguageDropDown class="mr-3" [selectedValue]="embryoService?.language" (selectedLanguage)="selectedLanguage($event)"></embryo-LanguageDropDown>-->
-<!--         </div>-->
-   		<embryo-header-user-profile></embryo-header-user-profile>
-   	</div>
+       <div class="logo-site" fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="35" fxFlex.lg="25%" fxFlex.xl="25%">
+           <img src="assets/images/logo-dark-custom.png" alt="" width="224">
+       </div>
    </div>
 </mat-toolbar>
 <!-- embryo-header-toolbar -->

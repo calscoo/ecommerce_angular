@@ -25,7 +25,7 @@ const MENUITEMS = [
         state: 'admin-panel/products',
         name: 'Products',
         type: 'link',
-        icon: 'shopping_cart'
+        icon: 'photo_library'
     },
     {
         state: '/home',

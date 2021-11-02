@@ -30,6 +30,7 @@ export class SideBarMenuComponent implements OnInit {
         if (this.depth === undefined) {
             this.depth = 0;
         }
+        this.expanded = true;
     }
 
     ngOnInit() {

@@ -11,7 +11,8 @@
 @media(max-width:960px) {
 	.user-end .sidebar-area {
 		width: 280px;
-		background-image: $responsive-sidebar-bg;
+		//background-image: $responsive-sidebar-bg;
+		background-color: $primary;
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
