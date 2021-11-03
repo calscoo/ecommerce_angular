@@ -8,9 +8,11 @@ import {EmbryoService} from '../../../Services/Embryo.service';
     styleUrls: ['./Header.component.scss']
 })
 export class AdminHeaderComponent implements OnInit {
+    mini: any;
 
     constructor(private coreService: AdminPanelServiceService,
                 public embryoService: EmbryoService) {
+        this.mini = 'mini';
     }
 
     ngOnInit() {

@@ -3,16 +3,16 @@
      <div class="container">
        <div fxLayout="row wrap">
          <div class="logo-site" fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="35" fxFlex.lg="25%" fxFlex.xl="25%">
-          <embryo-AppLogo></embryo-AppLogo>
+             <embryo-AppLogo></embryo-AppLogo>
          </div>
          <div fxFlex.sm="60" fxHide.xs="true" fxHide.sm="true" fxFlex.md="40" fxFlex.lg="60%" fxFlex.xl="60%" class="align-center"></div>
          <div fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="15%" fxFlex.xl="15%">
-           <span fxFlex></span>
-               <div class="list-flex user-tool">
-                 <embryo-HeaderCart [currency]="embryoService?.currency" [cartProducts]="embryoService?.localStorageCartProducts" [count]="embryoService?.navbarCartCount" (removeProductData)="openConfirmationPopup($event)"></embryo-HeaderCart>
-                 <embryo-HeaderUserProfileDropdown></embryo-HeaderUserProfileDropdown>
-               </div>
-          </div>
+             <span fxFlex></span>
+             <div class="list-flex user-tool">
+                   <embryo-HeaderCart [currency]="embryoService?.currency" [cartProducts]="embryoService?.localStorageCartProducts" [count]="embryoService?.navbarCartCount" (removeProductData)="openConfirmationPopup($event)"></embryo-HeaderCart>
+                   <embryo-HeaderUserProfileDropdown></embryo-HeaderUserProfileDropdown>
+             </div>
+         </div>
        </div>
      </div>
    </mat-toolbar-row>

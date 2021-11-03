@@ -51,9 +51,7 @@ import {EmbryoService} from './Services/Embryo.service';
 
 import {AppComponent} from './app.component';
 import {MainComponent} from './Main/Main.component';
-import {HeaderOneComponent} from './Layouts/Header/HeaderOne/HeaderOne.component';
 import {HeaderTwoComponent} from './Layouts/Header/HeaderTwo/HeaderTwo.component';
-import {HeaderThreeComponent} from './Layouts/Header/HeaderThree/HeaderThree.component';
 import {FooterOneComponent} from './Layouts/Footer/FooterOne/FooterOne.component';
 import {FooterTwoComponent} from './Layouts/Footer/FooterTwo/FooterTwo.component';
 import {MenuComponent} from './Layouts/Menu/Menu/Menu.component';
@@ -82,7 +80,6 @@ export function createTranslateLoader(http: HttpClient) {
         AppComponent,
         MainComponent,
         HomeoneComponent,
-        HeaderOneComponent,
         FooterOneComponent,
         MenuComponent,
         SideBarMenuComponent,
@@ -91,7 +88,6 @@ export function createTranslateLoader(http: HttpClient) {
         PaymentDetailSideBarComponent,
         HeaderTwoComponent,
         FooterTwoComponent,
-        HeaderThreeComponent,
         FixedHeaderComponent
     ],
     imports: [

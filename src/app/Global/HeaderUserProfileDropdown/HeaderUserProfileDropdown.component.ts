@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
     selector: 'embryo-HeaderUserProfileDropdown',
@@ -6,6 +6,8 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./HeaderUserProfileDropdown.component.scss']
 })
 export class HeaderUserProfileDropdownComponent implements OnInit {
+
+    @Input() size: any;
 
     constructor() {
     }

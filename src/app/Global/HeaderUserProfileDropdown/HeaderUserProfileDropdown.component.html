@@ -1,8 +1,14 @@
-<button mat-mini-fab class="log-in-user" [matMenuTriggerFor]="loginuser">
-  <i class="material-icons notranslate">
-    account_circle
-  </i>
-</button>
+<ng-container *ngIf="size == 'mini' else regularButtonBlock">
+  <button mat-mini-fab class="header-mat-button" [matMenuTriggerFor]="loginuser" color="primary">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+</ng-container>
+<ng-template #regularButtonBlock>
+  <button mat-fab class="header-mat-button" [matMenuTriggerFor]="loginuser" color="primary">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+</ng-template>
+
 <mat-menu #loginuser="matMenu">
   <button mat-menu-item fxLayoutAlign="start center" [routerLink]="['/account/profile']"><i class="material-icons mr-1">account_circle</i> <span>Account</span></button>
   <button mat-menu-item [routerLink]="['/session/signin']"><i class="material-icons mr-1">style</i><span>Orders</span></button>

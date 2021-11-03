@@ -10,9 +10,11 @@ export class HeaderTwoComponent implements OnInit {
 
     popupResponse: any;
     right: any;
+    mini: any;
 
     constructor(public embryoService: EmbryoService) {
         this.right = 'rtl';
+        this.mini = 'mini';
     }
 
     ngOnInit() {
