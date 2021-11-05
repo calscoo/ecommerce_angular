@@ -24,11 +24,14 @@
      </div>
    </mat-toolbar-row>
    <mat-toolbar-row [dir]="right" class="responsive-bar relative">
-         <div class="container">
-             <button class="responsive-toggle" mat-icon-button (click)="toggleSidebar()">
+       <div class="container">
+           <button class="responsive-toggle" mat-icon-button (click)="toggleSidebar()">
                <i class="material-icons">menu</i>
-             </button>
-         </div>
-       </mat-toolbar-row>
+           </button>
+           <button class="responsive-toggle" mat-icon-button [routerLink]="['/products']">
+               <i class="material-icons">storefront</i>
+           </button>
+       </div>
+   </mat-toolbar-row>
  </mat-toolbar>
  <embryo-FixedHeader></embryo-FixedHeader>

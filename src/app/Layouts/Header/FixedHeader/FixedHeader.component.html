@@ -5,10 +5,15 @@
         <div class="logo-site">
           <embryo-AppLogo></embryo-AppLogo>
         </div>
-        <embryo-Menu></embryo-Menu>
-        <button class="responsive-toggle" mat-icon-button (click)="toggleSidebar()">
-          <i class="material-icons">menu</i>
-        </button>
+        <div [dir]="right" class="container">
+          <embryo-Menu></embryo-Menu>
+          <button class="responsive-toggle" mat-icon-button (click)="toggleSidebar()">
+            <i class="material-icons">menu</i>
+          </button>
+          <button class="responsive-toggle" mat-icon-button [routerLink]="['/products']">
+            <i class="material-icons">storefront</i>
+          </button>
+        </div>
       </div>
     </div>
   </mat-toolbar-row>

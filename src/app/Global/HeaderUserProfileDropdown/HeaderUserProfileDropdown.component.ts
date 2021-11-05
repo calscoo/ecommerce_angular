@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HeaderUserProfileDropdownComponent implements OnInit {
 
-    @Input() size: any;
+    @Input() admin: boolean;
 
     constructor() {
     }

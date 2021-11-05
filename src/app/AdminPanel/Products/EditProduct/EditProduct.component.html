@@ -92,14 +92,7 @@
                         </div>
                         <div class="mb-5 detail-btns">
                            <button mat-raised-button color="accent" class="button-lg mr-3">Save</button>
-                           <button class="button-lg" mat-raised-button>Discard</button>
-                        </div>
-                        <!-- detail-btns -->
-                        <div fxLayoutAlign="start center">
-                           <div class="mr-3"> <span>Share Now</span></div>
-                           <div class="detail-product-share">
-                           <embryo-SocialShare></embryo-SocialShare>
-                         </div>
+                           <button class="button-lg" mat-raised-button [routerLink]="['/admin-panel/products']">Discard</button>
                         </div>
                      </div>
                      <!-- product-detail-content -->

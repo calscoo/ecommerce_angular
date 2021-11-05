@@ -8,6 +8,7 @@ import {MenuItems} from '../../../Core/menu/menu-items/menu-items';
     styleUrls: ['./FooterOne.component.scss']
 })
 export class FooterOneComponent implements OnInit {
+    date: Date = new Date();
 
     constructor(public menuItems: MenuItems,
                 public translate: TranslateService) {

@@ -7,8 +7,10 @@ import {EmbryoService} from '../../../Services/Embryo.service';
     styleUrls: ['./FixedHeader.component.scss']
 })
 export class FixedHeaderComponent implements OnInit {
+    right: any;
 
     constructor(private embryoService: EmbryoService) {
+        this.right = 'rtl';
     }
 
     ngOnInit() {

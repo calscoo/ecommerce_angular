@@ -7,15 +7,15 @@
       </div>
       <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="70" fxFlex.lg="70" fxFlex.xl="70">
          <div fxLayout="row wrap">
-            <div class="form-group pr-3" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="calc(100% - 150px)" fxFlex.lg="calc(100% - 150px)" fxFlex.xl="calc(100% - 150px)">
+            <div class="form-group pr-3" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="calc(100% - 300px)" fxFlex.lg="calc(100% - 300px)" fxFlex.xl="calc(100% - 300px)">
 <!--               <mat-form-field class="w-100" floatLabel="never">-->
 <!--                  <input matInput placeholder="Search Products">-->
 <!--               </mat-form-field>-->
             </div>
             <!-- form-group -->
-            <div class="contact-btn" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="150px" fxFlex.lg="150px" fxFlex.xl="150px">
-<!--               <button class="mr-2 mb-2" mat-raised-button color="primary">Search</button>-->
-               <button mat-raised-button color="primary" [routerLink]="['/admin-panel/product-add']" >Add Product<mat-icon class="ml-2">add</mat-icon></button>
+            <div class="contact-btn" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="300px" fxFlex.lg="300px" fxFlex.xl="300px">
+               <button style="display: inline-block;" mat-button color="primary" [routerLink]="['/admin-panel/product-add']">Add Type<mat-icon class="ml-2">add</mat-icon></button>
+               <button style="display: inline-block;" mat-button color="primary" [routerLink]="['/admin-panel/product-add']">Add Piece<mat-icon class="ml-2">add</mat-icon></button>
             </div>
             <!-- contact-btn -->
          </div>
@@ -28,10 +28,10 @@
    </div>
    <!-- title -->
    <div class="product-icon">
-      <button id="grid" class="active" mat-icon-button (click)="productShowType('grid')">
+      <button id="grid" mat-icon-button (click)="productShowType('grid')">
          <mat-icon>apps</mat-icon>
       </button>
-      <button id="list" mat-icon-button (click)="productShowType('list')">
+      <button id="list" mat-icon-button class="active" (click)="productShowType('list')">
          <mat-icon>list</mat-icon>
       </button>
    </div>

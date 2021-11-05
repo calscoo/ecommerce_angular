@@ -3,12 +3,12 @@
       <button class="" mat-mini-fab color="primary" mat-card-icon (click)="toggleSidebar()">
          <mat-icon>menu</mat-icon>
       </button>
-       <embryo-HeaderUserProfileDropdown [size]="mini"></embryo-HeaderUserProfileDropdown>
+       <embryo-HeaderUserProfileDropdown [admin]="admin"></embryo-HeaderUserProfileDropdown>
    </div>
    <div fxFlex.xs="60" fxFlex.sm="60" fxFlex.md="50" fxFlex.lg="33%" fxFlex.xl="33%">
 		<span fxFlex></span>
        <div class="logo-site" fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="35" fxFlex.lg="25%" fxFlex.xl="25%">
-           <img src="assets/images/logo-dark-custom.png" alt="" width="224">
+           <a [routerLink]="['/']"> <img src="assets/images/logo-dark-custom.png" width="224" height="34" alt=""> </a>
        </div>
    </div>
 </mat-toolbar>

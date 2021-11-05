@@ -17,8 +17,8 @@ export class ProductsComponent implements OnInit {
     productsList: any;
     productsGrid: any;
     popUpDeleteUserResponse: any;
-    showType: string = 'grid';
-    displayedProductColumns: string [] = ['id', 'image', 'name', 'brand', 'category', 'product_code', 'discount_price', 'price', 'action'];
+    showType: string = 'list';
+    displayedProductColumns: string [] = ['id', 'image', 'name', 'category', 'discount_price', 'price', 'action'];
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
 

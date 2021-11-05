@@ -11,7 +11,7 @@
               unde explicabo consequuntur aliquid laudantium id voluptatum? Saepe earum, suscipit ex quos eius natus.
             </p>
           </div>
-          
+
           <div fxFlex.xs="100" fxFlex.sm="25" fxFlex.md="15" fxFlex.lg="15" fxFlex.xl="15" *ngFor="let menu of menuItems.getFooterOneMenu()">
             <div>
               <p>{{menu.name | translate}}</p>
@@ -30,7 +30,7 @@
             <img src="assets/images/secure.png" width="120" height="50" alt="Credit Cards">
           </div>
           <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" class="text-right">
-            &copy; All Rights Reversed
+            Copyright &copy; {{date | date: 'yyyy'}}, Caleb Olson Media. All Rights Reversed.
           </div>
         </div>
       </div>
