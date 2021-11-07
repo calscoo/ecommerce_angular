@@ -15,6 +15,31 @@ export class DetailPageComponent implements OnInit {
     singleProductData: any;
     productsList: any;
 
+    products = [
+        {
+            "id": 16,
+            "name": "BIG TEST BOY",
+            "price": 69.69,
+            "description": "Adipisicing elit. Distinctio aperiam debitis ipsa veniam eos quas excepturi quae? Recusandae distinctio nihil quia quis, eaque aspernatur perferendis repudiandae adipisci labore, impedit beatae! Lorem ipsum dolor sit amet consectetur",
+            "image": "assets/images/matt_test.jpg",
+        }
+    ];
+
+    product = {
+        "id": 16,
+        "description": "Adipisicing elit. Distinctio aperiam debitis ipsa veniam eos quas excepturi quae? Recusandae distinctio nihil quia quis, eaque aspernatur perferendis repudiandae adipisci labore, impedit beatae! Lorem ipsum dolor sit amet consectetur",
+        "image": "assets/images/accessroies/a-1-a.jpg",
+        "image_gallery": [
+            "assets/images/accessroies/a-1-a.jpg",
+            "assets/images/accessroies/a-1-b.jpg",
+            "assets/images/accessroies/a-1-c.jpg",
+            "assets/images/accessroies/a-1-d.jpg"
+        ],
+        "name": "Laptop Backpack",
+        "price": 92.75,
+        "quantity": 1,
+    };
+
     constructor(private route: ActivatedRoute,
                 private router: Router,
                 public embryoService: EmbryoService) {
@@ -34,14 +59,9 @@ export class DetailPageComponent implements OnInit {
     }
 
     public checkResponse(response) {
+        this.singleProductData = this.product;
         this.productsList = null;
-        this.productsList = response[this.type];
-        for (let data of this.productsList) {
-            if (data.id == this.id) {
-                this.singleProductData = data;
-                break;
-            }
-        }
+        this.productsList = this.products;
     }
 
     public addToCart(value) {

@@ -42,7 +42,6 @@ import {RatingComponent} from './Rating/Rating.component';
 import {AddToCardButtonComponent} from './AddToCardButton/AddToCardButton.component';
 import {ReviewPopupComponent} from './ReviewPopup/ReviewPopup.component';
 import {HeaderCartComponent} from './HeaderCart/HeaderCart.component';
-import {WishListComponent} from './WishList/WishList.component';
 import {ConfirmationPopupComponent} from './ConfirmationPopup/ConfirmationPopup.component';
 import {PageTitleComponent} from './PageTitle/PageTitle.component';
 import {HomePageOneSliderComponent} from './Slider/HomePageOneSlider/HomePageOneSlider.component';
@@ -124,7 +123,6 @@ import {NewProductsCardComponent} from './NewProductsCard/NewProductsCard.compon
         AddToCardButtonComponent,
         ReviewPopupComponent,
         HeaderCartComponent,
-        WishListComponent,
         ConfirmationPopupComponent,
         PageTitleComponent,
         HomePageOneSliderComponent,
@@ -165,7 +163,6 @@ import {NewProductsCardComponent} from './NewProductsCard/NewProductsCard.compon
         RatingComponent,
         AddToCardButtonComponent,
         HeaderCartComponent,
-        WishListComponent,
         PageTitleComponent,
         HomePageOneSliderComponent,
         TimerCountDownComponent,

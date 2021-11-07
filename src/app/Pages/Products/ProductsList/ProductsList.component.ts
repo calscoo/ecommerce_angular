@@ -18,6 +18,17 @@ export class ProductsListComponent implements OnInit {
 
     public subscribers: any = {};
 
+
+    products = [
+        {
+            "id": "18",
+            "name": "BIG TEST BOY",
+            "price": 69.69,
+            "description": "",
+            "image": "assets/images/matt_test.jpg",
+        }
+    ];
+
     constructor(private route: ActivatedRoute, private router: Router, public embryoService: EmbryoService) {
     }
 
@@ -62,10 +73,6 @@ export class ProductsListComponent implements OnInit {
 
     public addToCart(value) {
         this.embryoService.addToCart(value);
-    }
-
-    public addToWishList(value) {
-        this.embryoService.addToWishlist(value);
     }
 
     public transformHits(hits) {

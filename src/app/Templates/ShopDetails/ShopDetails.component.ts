@@ -15,7 +15,6 @@ export class ShopDetailsComponent implements OnInit, OnChanges {
 
     mainImgPath: string;
     totalPrice: any;
-    type: any;
     colorsArray: string[] = ['Red', 'Blue', 'Yellow', 'Green'];
     sizeArray: number[] = [36, 38, 40, 42, 44, 46, 48];
     quantityArray: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -33,11 +32,6 @@ export class ShopDetailsComponent implements OnInit, OnChanges {
     ngOnInit() {
         this.mainImgPath = this.detailData.image;
         this.totalPrice = this.detailData.price;
-
-        this.route.params.subscribe(res => {
-            this.type = null;
-            this.type = res.type;
-        });
     }
 
     ngOnChanges() {

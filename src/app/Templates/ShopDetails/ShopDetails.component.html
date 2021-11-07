@@ -21,7 +21,7 @@
               <div fxFlex.xs="85" fxFlex.sm="85" fxFlex.md="85" fxFlex.lg="85" fxFlex.xl="85" class="relative" *ngIf="mainImgPath">
                 <embryo-ImgZoom 
                 [imgSrc]="mainImgPath" 
-                    imgStyle="width:auto; height:auto;" 
+                    imgStyle="width:auto; height:auto; border-radius: 2%;"
                     resultStyle="background-repeat: no-repeat; z-index: 2; position:absolute;
                                    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
                                     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); top: 0;left: 100%;"
@@ -33,58 +33,16 @@
           </div>
           <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md=50 fxFlex.lg="50" fxFlex.xl="50">
             <div class="product-detail-content">
-              <a href="javascript:void(0)" [routerLink]="['/']">Back to Shop</a>
+              <a href="javascript:void(0)" [routerLink]="['/products']">Back to Shop</a>
               <h3>{{detailData?.name}}</h3>
-              <div fxLayoutAlign="start center" class="mb-3">
-                <div>
-                  <a href="javascript:void(0)" class="text-underline" (click)="reviewPopup(detailData)">ADD A REVIEW</a>
-                </div>
-              </div>
               <div class="product-detail-price">
                 <h4 class="accent-color">{{totalPrice | currency:currency}} </h4>
               </div>
-              <ul class="no-style mb-4">
-                <li>
-                  <span class="font-medium"> Availablity </span>: 
-                    <span *ngIf="detailData?.availablity">In Stocks</span>
-                    <span *ngIf="!(detailData?.availablity)">Out Of Stocks</span>
-                </li>
-                <li>
-                  <span class="font-medium">Product Code </span>: {{detailData?.product_code}}
-                </li>
-                <li>
-                  <span class="font-medium">Tags</span>: 
-                    <ng-container *ngFor="let tag of detailData.tags">{{tag}}</ng-container>
-                </li>
-              </ul>
               <div class="short-des">
                 <p>{{detailData?.description}}
                 </p>
               </div>
-              <div class="bullets-points">
-                <ul class="bullets-list">
-                  <li *ngFor="let feature of detailData?.features">
-                    {{feature}}
-                  </li>
-                </ul>
-              </div>
               <div fxLayoutGap="30px" class="mb-3 select-group">
-                <ng-container *ngIf="type == 'men' || type == 'women'">
-                  <mat-form-field>
-                    <mat-select class="product-detail-select" placeholder="Color">
-                      <ng-container *ngFor="let color of colorsArray">
-                        <mat-option class="product-detail-select" value="{{color}}">{{color}}</mat-option>
-                      </ng-container>
-                    </mat-select>
-                  </mat-form-field>
-                  <mat-form-field>
-                    <mat-select placeholder="Size">
-                      <ng-container *ngFor = "let size of sizeArray">
-                        <mat-option value="{{size}}">{{size}}</mat-option>
-                      </ng-container>
-                    </mat-select>
-                  </mat-form-field>
-                </ng-container>
                 <mat-form-field>
                   <mat-select placeholder="Quantity" (selectionChange)="calculatePrice(detailData, $event.value)">
                     <ng-container *ngFor="let quantity of quantityArray">
@@ -93,18 +51,9 @@
                   </mat-select>
                 </mat-form-field>
               </div>
-              <div class="mb-4">
-                <a href="javascript:void(0)" class="text-underline" (click)="addToWishlist(detailData)"> Add To Wishlist</a>
-              </div>
               <div class="mb-5 detail-btns">
                 <button mat-raised-button color="accent" class="button-lg mr-3" (click)="addToCart(detailData)">Add To Cart</button>
                 <button class="button-lg" mat-raised-button (click)="buyNow(detailData)">Buy Now</button>
-              </div>
-              <div fxLayoutAlign="start center">
-                <div class="mr-3"> <span>Share Now</span></div>
-                <div class="detail-product-share">
-                  <embryo-SocialShare></embryo-SocialShare>
-                </div>
               </div>
             </div>
           </div>

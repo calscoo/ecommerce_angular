@@ -44,10 +44,6 @@ export const AppRoutes: Routes = [
                     import('./Pages/About/About.module').then(m => m.AboutModule)
             },
             {
-                path: 'blogs', loadChildren: () =>
-                    import('./Pages/Blogs/Blogs.module').then(m => m.BlogsModule)
-            },
-            {
                 path: 'account', loadChildren: () =>
                     import('./Pages/UserAccount/UserAccount.module').then(m => m.UserAccountModule)
             }
