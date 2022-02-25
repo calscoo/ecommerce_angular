@@ -63,7 +63,6 @@ import {PaymentDetailSideBarComponent} from './Layouts/PaymentDetailSideBar/Paym
 import {FixedHeaderComponent} from './Layouts/Header/FixedHeader/FixedHeader.component';
 
 import {PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface, PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
-import {AdminPanelModule} from './AdminPanel/admin-panel.module';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -139,8 +138,7 @@ export function createTranslateLoader(http: HttpClient) {
             }
         }),
         SlickCarouselModule,
-        PerfectScrollbarModule,
-        AdminPanelModule
+        PerfectScrollbarModule
     ],
     providers: [
         MenuItems,

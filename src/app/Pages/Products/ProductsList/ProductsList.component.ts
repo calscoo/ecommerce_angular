@@ -18,8 +18,42 @@ export class ProductsListComponent implements OnInit {
 
     public subscribers: any = {};
 
-
     products = [
+        {
+            "id": "18",
+            "name": "BIG TEST BOY",
+            "price": 69.69,
+            "description": "",
+            "image": "assets/images/matt_test.jpg",
+        },
+        {
+            "id": "18",
+            "name": "BIG TEST BOY",
+            "price": 69.69,
+            "description": "",
+            "image": "assets/images/matt_test.jpg",
+        },
+        {
+            "id": "18",
+            "name": "BIG TEST BOY",
+            "price": 69.69,
+            "description": "",
+            "image": "assets/images/matt_test.jpg",
+        },
+        {
+            "id": "18",
+            "name": "BIG TEST BOY",
+            "price": 69.69,
+            "description": "",
+            "image": "assets/images/matt_test.jpg",
+        },
+        {
+            "id": "18",
+            "name": "BIG TEST BOY",
+            "price": 69.69,
+            "description": "",
+            "image": "assets/images/matt_test.jpg",
+        },
         {
             "id": "18",
             "name": "BIG TEST BOY",

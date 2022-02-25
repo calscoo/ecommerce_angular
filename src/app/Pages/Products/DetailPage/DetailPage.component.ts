@@ -17,10 +17,45 @@ export class DetailPageComponent implements OnInit {
 
     products = [
         {
-            "id": 16,
+            "id": "18",
             "name": "BIG TEST BOY",
             "price": 69.69,
-            "description": "Adipisicing elit. Distinctio aperiam debitis ipsa veniam eos quas excepturi quae? Recusandae distinctio nihil quia quis, eaque aspernatur perferendis repudiandae adipisci labore, impedit beatae! Lorem ipsum dolor sit amet consectetur",
+            "description": "",
+            "image": "assets/images/matt_test.jpg",
+        },
+        {
+            "id": "18",
+            "name": "BIG TEST BOY",
+            "price": 69.69,
+            "description": "",
+            "image": "assets/images/matt_test.jpg",
+        },
+        {
+            "id": "18",
+            "name": "BIG TEST BOY",
+            "price": 69.69,
+            "description": "",
+            "image": "assets/images/matt_test.jpg",
+        },
+        {
+            "id": "18",
+            "name": "BIG TEST BOY",
+            "price": 69.69,
+            "description": "",
+            "image": "assets/images/matt_test.jpg",
+        },
+        {
+            "id": "18",
+            "name": "BIG TEST BOY",
+            "price": 69.69,
+            "description": "",
+            "image": "assets/images/matt_test.jpg",
+        },
+        {
+            "id": "18",
+            "name": "BIG TEST BOY",
+            "price": 69.69,
+            "description": "",
             "image": "assets/images/matt_test.jpg",
         }
     ];

@@ -135,6 +135,10 @@ img {
 }
 
 // Section gap class between the home page sections
+.section-gap-xsm {
+  padding: 1rem 0;
+}
+
 .section-gap-sm {
   padding: 2rem 0;
 }
@@ -156,6 +160,9 @@ img {
 
 .section-gap-top-lg {
   padding: 7rem 0 0 0;
+}
+.section-gap-bottom-xsm {
+  padding: 0 0 1rem 0;
 }
 .section-gap-bottom-sm {
   padding: 0 0 2rem 0;

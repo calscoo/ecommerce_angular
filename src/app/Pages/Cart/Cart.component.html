@@ -43,16 +43,6 @@
 		</div>
 		<div class="cart-total" fxLayout='row wrap' fxLayoutAlign="flex-end">
 		  <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="40" fxFlex.lg="40" fxFlex.xl="40">
-			 <div>
-				<p>Subtotal</p><span fxFlex></span> {{calculateTotalPrice() | currency:embryoService?.currency}}
-			 </div>
-			 <div>
-				<p>Shipping</p><span fxFlex></span> {{embryoService.shipping | currency:embryoService?.currency}}
-			 </div>
-			 <div>
-				<p>Tax(GST)</p><span fxFlex></span> {{embryoService.tax | currency:embryoService?.currency}}
-			 </div>
-			 <hr class="spacer">
 			 <div class="mb-4">
 				<h4>Total</h4><span fxFlex></span>
 				<h4> {{getTotalPrice() | currency:embryoService?.currency}}</h4>

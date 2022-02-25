@@ -48,7 +48,7 @@ export class EmbryoService {
         localStorage.removeItem('byProductDetails');
 
         this.db.object('products').valueChanges().subscribe(res => {
-            this.setCartItemDefaultValue(res['gadgets'][1]);
+            // this.setCartItemDefaultValue(res['gadgets'][1]);
         });
     }
 

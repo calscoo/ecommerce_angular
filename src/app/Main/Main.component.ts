@@ -31,20 +31,6 @@ export class MainComponent implements OnInit {
                 meta: Meta, title: Title,
                 private activatedRoute: ActivatedRoute) {
 
-        title.setTitle('Embryo - Angular 10 Material Design eCommerce Template');
-
-        meta.addTags([
-            {name: 'author', content: 'The IRON Network'},
-            {
-                name: 'keywords',
-                content: ' angular, angular 2, angular 6, angular 7, angular 8, angular 9, angular 10 angular material, clean, creative, ecommerce, frontend, online store, shop, shopping, store, typescript, ui framework '
-            },
-            {
-                name: 'description',
-                content: 'Embryo is an E-Commerce angular 10 based template with material design. It also comes with Angular cli. Now you have all the power to maintain your ecommerce site. Responsive design gives your user to use in any modern devices. Clean Code gives you the power to customize the code as per as your requirments. Embryo has all the basics functionality which is required in ecommerce site. Rtl design makes the multi-language support with more easy way.'
-            }
-        ]);
-
         this.right = 'rtl';
         this.left = 'ltr';
 
@@ -58,7 +44,6 @@ export class MainComponent implements OnInit {
 
     ngOnInit() {
         this.startTimer();
-        document.getElementById('html').classList.remove('admin-panel');
         document.getElementById('html').classList.add('user-end');
     }
 

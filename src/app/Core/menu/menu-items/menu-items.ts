@@ -19,38 +19,53 @@ const HeaderOneItems = [
         icon: 'home'
     },
     {
-        state: '',
+        state: 'products/',
         name: 'SHOP',
-        type: 'sub',
-        icon: 'storefront',
-        children: [
-            {
-                state: 'products/',
-                name: 'Products',
-                type: 'link',
-                icon: 'photo_library'
-            },
-            {
-                state: 'cart',
-                name: 'Cart',
-                type: 'link',
-                icon: 'shopping_cart'
-            },
-            {
-                state: 'checkout',
-                name: 'Checkout',
-                type: 'link',
-                icon: 'shopping_bag'
-            }
-        ]
-    },
-    {
-        state: 'admin-panel',
-        name: 'ADMIN PANEL',
         type: 'link',
-        icon: 'admin_panel_settings'
+        icon: 'storefront'
     }
 ];
+
+// const HeaderOneItems = [
+//     {
+//         state: 'home',
+//         name: 'HOME',
+//         type: 'link',
+//         icon: 'home'
+//     },
+//     {
+//         state: '',
+//         name: 'SHOP',
+//         type: 'sub',
+//         icon: 'storefront',
+//         children: [
+//             {
+//                 state: 'products/',
+//                 name: 'Products',
+//                 type: 'link',
+//                 icon: 'photo_library'
+//             },
+//             {
+//                 state: 'cart',
+//                 name: 'Cart',
+//                 type: 'link',
+//                 icon: 'shopping_cart'
+//             },
+//             {
+//                 state: 'checkout',
+//                 name: 'Checkout',
+//                 type: 'link',
+//                 icon: 'shopping_bag'
+//             }
+//         ]
+//     },
+//     {
+//         state: 'admin-panel',
+//         name: 'ADMIN PANEL',
+//         type: 'link',
+//         icon: 'admin_panel_settings'
+//     }
+// ];
 
 const FooterOneItems = [
     {
@@ -91,30 +106,6 @@ const FooterOneItems = [
         type: 'sub',
         icon: '',
         children: [
-            {
-                state: 'session/signin',
-                name: 'SIGN IN',
-                type: 'link',
-                icon: 'arrow_right_alt',
-            },
-            {
-                state: 'session/signup',
-                name: 'REGISTER',
-                type: 'link',
-                icon: 'arrow_right_alt',
-            },
-            {
-                state: 'session/forgot-password',
-                name: 'FORGET PASSWORD',
-                type: 'link',
-                icon: 'arrow_right_alt',
-            },
-            {
-                state: 'session/thank-you',
-                name: 'THANK YOU',
-                type: 'link',
-                icon: 'arrow_right_alt',
-            }
         ]
     },
     {

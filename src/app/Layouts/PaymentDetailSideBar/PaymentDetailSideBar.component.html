@@ -43,16 +43,6 @@
             <hr class="spacer">
           </div>
           <div class="px-3 text-right">
-            <div>
-              <p>Subtotal</p><span fxFlex></span> {{calculateTotalPrice() | currency:embryoService?.currency}}
-            </div>
-            <div>
-              <p>Shipping</p><span fxFlex></span> {{embryoService.shipping | currency:embryoService?.currency}}
-            </div>
-            <div>
-              <p>Tax(GST)</p><span fxFlex></span> {{embryoService.tax | currency:embryoService?.currency}}
-            </div>
-            <hr class="spacer">
             <div class="mb-4">
               <h4>Total</h4><span fxFlex></span>
               <h4> {{getTotalPrice() | currency:embryoService?.currency}}</h4>
