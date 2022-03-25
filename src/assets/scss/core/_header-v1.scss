@@ -99,12 +99,12 @@ menu {
              width: 100%;
            }
          }
-         &:last-child{
-            background-color: $accent;
-            a{
-              color:#fff !important;
-            }
-         }
+         //&:last-child{
+         //   background-color: $accent;
+         //   a{
+         //     color:#fff !important;
+         //   }
+         //}
       }
       li{
          .nav-link.menu-item-has-children{

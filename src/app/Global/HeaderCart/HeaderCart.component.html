@@ -1,7 +1,4 @@
 <ng-container *ngIf="(mobWidth >= mobScreenSize) else elseButtonBlock">
-   <button mat-fab color="primary" [matMenuTriggerFor]="viewdropmenu">
-      <mat-icon>shopping_cart</mat-icon>
-   </button>
    <mat-menu #viewdropmenu="matMenu">
       <ng-container *ngIf="(cartProducts && cartProducts.length > 0); else elseBlock">
          <div class="drop-wrap">

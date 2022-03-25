@@ -1,12 +1,11 @@
 
 
-<div class="section-gap-bottom-sm">
+<div>
 	<ng-container *ngIf="pageTitle">
-		<div class="inner-container section-gap-sm">
+		<div class="inner-container section-gap-xsm">
 			<div class="container">
 				<embryo-ProductGrid [currency]="embryoService?.currency" [products]="products" (addToCart)="addToCart($event)" gridThree=true></embryo-ProductGrid>
 			</div>
 		</div>
 	</ng-container>
 </div>
-<embryo-SubscribeTwo></embryo-SubscribeTwo>

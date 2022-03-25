@@ -53,10 +53,8 @@ import {AppComponent} from './app.component';
 import {MainComponent} from './Main/Main.component';
 import {HeaderTwoComponent} from './Layouts/Header/HeaderTwo/HeaderTwo.component';
 import {FooterOneComponent} from './Layouts/Footer/FooterOne/FooterOne.component';
-import {FooterTwoComponent} from './Layouts/Footer/FooterTwo/FooterTwo.component';
 import {MenuComponent} from './Layouts/Menu/Menu/Menu.component';
 import {HomeoneComponent} from './Pages/Home/HomeOne/HomeOne.component';
-import {CartComponent} from './Pages/Cart/Cart.component';
 import {NotFoundComponent} from './Pages/NotFound/NotFound.component';
 import {SideBarMenuComponent} from './Layouts/Menu/SidebarMenu/SidebarMenu.component';
 import {PaymentDetailSideBarComponent} from './Layouts/PaymentDetailSideBar/PaymentDetailSideBar.component';
@@ -82,11 +80,9 @@ export function createTranslateLoader(http: HttpClient) {
         FooterOneComponent,
         MenuComponent,
         SideBarMenuComponent,
-        CartComponent,
         NotFoundComponent,
         PaymentDetailSideBarComponent,
         HeaderTwoComponent,
-        FooterTwoComponent,
         FixedHeaderComponent
     ],
     imports: [

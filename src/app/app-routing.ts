@@ -2,7 +2,6 @@ import {Routes} from '@angular/router';
 
 import {MainComponent} from './Main/Main.component';
 import {HomeoneComponent} from './Pages/Home/HomeOne/HomeOne.component';
-import {CartComponent} from './Pages/Cart/Cart.component';
 import {NotFoundComponent} from './Pages/NotFound/NotFound.component';
 
 export const AppRoutes: Routes = [
@@ -16,36 +15,16 @@ export const AppRoutes: Routes = [
         component: MainComponent,
         children: [
             {
-                path: 'home',
-                component: HomeoneComponent
-            },
-            {
-                path: 'products', loadChildren: () =>
+                path: 'home', loadChildren: () =>
                     import('./Pages/Products/Products.module').then(m => m.ProductsModule)
             },
             {
-                path: 'cart',
-                component: CartComponent
+                path: 'blog',
+                component: HomeoneComponent
             },
             {
                 path: 'not-found',
                 component: NotFoundComponent
-            },
-            {
-                path: 'session', loadChildren: () =>
-                    import('./Pages/Session/Session.module').then(m => m.SessionModule)
-            },
-            {
-                path: 'checkout', loadChildren: () =>
-                    import('./Pages/Checkout/Checkout.module').then(m => m.CheckoutModule)
-            },
-            {
-                path: '', loadChildren: () =>
-                    import('./Pages/About/About.module').then(m => m.AboutModule)
-            },
-            {
-                path: 'account', loadChildren: () =>
-                    import('./Pages/UserAccount/UserAccount.module').then(m => m.UserAccountModule)
             }
         ]
     },
