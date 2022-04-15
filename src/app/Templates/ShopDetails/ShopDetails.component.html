@@ -33,7 +33,6 @@
           </div>
           <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md=50 fxFlex.lg="50" fxFlex.xl="50">
             <div class="product-detail-content">
-              <a href="javascript:void(0)" [routerLink]="['/products']">Back to Shop</a>
               <h3>{{detailData?.name}}</h3>
               <div class="product-detail-price">
                 <h4 class="accent-color">{{totalPrice | currency:currency}} </h4>
@@ -42,17 +41,7 @@
                 <p>{{detailData?.description}}
                 </p>
               </div>
-              <div fxLayoutGap="30px" class="mb-3 select-group">
-                <mat-form-field>
-                  <mat-select placeholder="Quantity" (selectionChange)="calculatePrice(detailData, $event.value)">
-                    <ng-container *ngFor="let quantity of quantityArray">
-                      <mat-option value="{{quantity}}">{{quantity}}</mat-option>
-                    </ng-container>
-                  </mat-select>
-                </mat-form-field>
-              </div>
               <div class="mb-5 detail-btns">
-                <button mat-raised-button color="accent" class="button-lg mr-3" (click)="addToCart(detailData)">Add To Cart</button>
                 <button class="button-lg" mat-raised-button (click)="buyNow(detailData)">Buy Now</button>
               </div>
             </div>

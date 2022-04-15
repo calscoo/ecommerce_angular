@@ -1,1 +1,4 @@
-<a [routerLink]="['/']"> <img src="assets/images/logo-dark-custom.png" width="224" height="34" alt=""> </a>
+<a [routerLink]="['/']">
+    <img *ngIf="!lightmode" src="assets/images/comlogo-dark.png" alt="">
+    <img *ngIf="lightmode" src="assets/images/comlogo-light.png" alt="">
+</a>

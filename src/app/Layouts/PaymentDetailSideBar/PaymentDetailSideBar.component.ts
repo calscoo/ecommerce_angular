@@ -30,16 +30,6 @@ export class PaymentDetailSideBarComponent implements OnInit {
         return subtotal;
     }
 
-    public removeProduct(value) {
-        let message = 'Are you sure you want to delete this product?';
-        this.embryoService.confirmationPopup(message).subscribe(res => {
-                this.popupResponse = res;
-            },
-            err => console.log(err),
-            () => this.getPopupResponse(this.popupResponse, value)
-        );
-    }
-
     public getPopupResponse(response, value) {
         if (response) {
             this.embryoService.removeLocalCartProduct(value);

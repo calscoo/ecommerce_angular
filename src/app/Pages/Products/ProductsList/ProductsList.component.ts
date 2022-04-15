@@ -10,13 +10,9 @@ import {EmbryoService} from '../../../Services/Embryo.service';
 export class ProductsListComponent implements OnInit {
 
     type: any;
-    pips = true;
-    tooltips = true;
     category: any;
     pageTitle: string;
     subPageTitle: string;
-
-    public subscribers: any = {};
 
     products = [
         {
@@ -24,42 +20,28 @@ export class ProductsListComponent implements OnInit {
             "name": "BIG TEST BOY",
             "price": 69.69,
             "description": "",
-            "image": "assets/images/matt_test.jpg",
+            "image": "assets/images/item2.png",
         },
         {
             "id": "18",
             "name": "BIG TEST BOY",
             "price": 69.69,
             "description": "",
-            "image": "assets/images/matt_test.jpg",
+            "image": "assets/images/item1.png",
         },
         {
             "id": "18",
             "name": "BIG TEST BOY",
             "price": 69.69,
             "description": "",
-            "image": "assets/images/matt_test.jpg",
+            "image": "assets/images/item2.png",
         },
         {
             "id": "18",
             "name": "BIG TEST BOY",
             "price": 69.69,
             "description": "",
-            "image": "assets/images/matt_test.jpg",
-        },
-        {
-            "id": "18",
-            "name": "BIG TEST BOY",
-            "price": 69.69,
-            "description": "",
-            "image": "assets/images/matt_test.jpg",
-        },
-        {
-            "id": "18",
-            "name": "BIG TEST BOY",
-            "price": 69.69,
-            "description": "",
-            "image": "assets/images/matt_test.jpg",
+            "image": "assets/images/item1.png",
         }
     ];
 
@@ -107,16 +89,5 @@ export class ProductsListComponent implements OnInit {
 
     public addToCart(value) {
         this.embryoService.addToCart(value);
-    }
-
-    public transformHits(hits) {
-        hits.forEach(hit => {
-            hit.stars = [];
-            for (let i = 1; i <= 5; i) {
-                hit.stars.push(i <= hit.rating);
-                i += 1;
-            }
-        });
-        return hits;
     }
 }

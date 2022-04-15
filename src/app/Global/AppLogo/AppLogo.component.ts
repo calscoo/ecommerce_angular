@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
     selector: 'embryo-AppLogo',
@@ -6,6 +6,8 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./AppLogo.component.scss']
 })
 export class AppLogoComponent implements OnInit {
+
+    @Input() lightmode = false;
 
     constructor() {
     }

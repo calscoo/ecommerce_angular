@@ -3,15 +3,15 @@
     <div class="container">
       <div fxLayoutAlign="space-between">
         <div class="logo-site">
-          <embryo-AppLogo></embryo-AppLogo>
+          <embryo-AppLogo [lightmode]="true"></embryo-AppLogo>
         </div>
         <div [dir]="right" class="container">
           <embryo-Menu></embryo-Menu>
           <button class="responsive-toggle" mat-icon-button (click)="toggleSidebar()">
             <i class="material-icons">menu</i>
           </button>
-          <button class="responsive-toggle" mat-icon-button [routerLink]="['/home']">
-            <i class="material-icons">shopping_bag</i>
+          <button class="responsive-toggle" mat-icon-button [routerLink]="['/shop']">
+            <i class="material-icons">storefront</i>
           </button>
         </div>
       </div>

@@ -31,14 +31,6 @@
                  </p>
                 <p class="font-bold">{{calculateProductSinglePrice(product, product?.quantity) | currency:embryoService?.currency}}</p>
               </div>
-              <div fxFlex.xs="20" fxFlex.sm="20" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20" class="side-cart-actions text-center px-2">
-                <a href="javascript:void(0)" (click)="removeProduct(product)"><i class="material-icons">
-                    remove_shopping_cart
-                  </i></a>
-                <a [routerLink]="['/cart']" (click)="embryoService.paymentSidenavOpen=false"><i class="material-icons">
-                    edit
-                  </i></a>
-              </div>
             </div>
             <hr class="spacer">
           </div>

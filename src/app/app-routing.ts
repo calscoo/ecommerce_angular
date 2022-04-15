@@ -7,7 +7,7 @@ import {NotFoundComponent} from './Pages/NotFound/NotFound.component';
 export const AppRoutes: Routes = [
     {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'shop',
         pathMatch: 'full',
     },
     {
@@ -15,13 +15,13 @@ export const AppRoutes: Routes = [
         component: MainComponent,
         children: [
             {
-                path: 'home', loadChildren: () =>
+                path: 'shop', loadChildren: () =>
                     import('./Pages/Products/Products.module').then(m => m.ProductsModule)
             },
-            {
-                path: 'blog',
-                component: HomeoneComponent
-            },
+            // {
+            //     path: 'blog',
+            //     component: HomeoneComponent
+            // },
             {
                 path: 'not-found',
                 component: NotFoundComponent

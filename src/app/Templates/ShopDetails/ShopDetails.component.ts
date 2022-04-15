@@ -55,15 +55,6 @@ export class ShopDetailsComponent implements OnInit, OnChanges {
         this.totalPrice = detailData.price * value;
     }
 
-    public reviewPopup(detailData) {
-        let reviews: any = null;
-        for (let review of this.productReviews) {
-            reviews = review.user_rating;
-        }
-
-        this.embryoService.reviewPopup(detailData, reviews);
-    }
-
     public addToWishlist(value: any) {
         this.embryoService.addToWishlist(value);
     }

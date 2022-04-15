@@ -14,31 +14,31 @@ export interface Menu {
 
 const HeaderOneItems = [
     {
-        state: 'home',
+        state: 'shop',
         name: 'SHOP',
         type: 'link',
-        icon: 'shopping_bag'
+        icon: 'storefront'
     },
-    {
-        state: '',
-        name: 'BLOG',
-        type: 'sub',
-        icon: 'newspaper',
-        children: [
-            {
-                state: 'blog/',
-                name: '2022 EXHIBITION',
-                type: 'link',
-                icon: 'sticky_note_2'
-            },
-            {
-                state: 'blog/',
-                name: '2021 EXHIBITION',
-                type: 'link',
-                icon: 'sticky_note_2'
-            }
-        ]
-    }
+    // {
+    //     state: '',
+    //     name: 'BLOG',
+    //     type: 'sub',
+    //     icon: 'newspaper',
+    //     children: [
+    //         {
+    //             state: 'blog/',
+    //             name: '2022 EXHIBITION',
+    //             type: 'link',
+    //             icon: 'sticky_note_2'
+    //         },
+    //         {
+    //             state: 'blog/',
+    //             name: '2021 EXHIBITION',
+    //             type: 'link',
+    //             icon: 'sticky_note_2'
+    //         }
+    //     ]
+    // }
 ];
 
 

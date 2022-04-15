@@ -1,11 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {MatDialog, MatDialogConfig, MatDialogRef} from '@angular/material/dialog';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {AngularFireDatabase, AngularFireObject} from '@angular/fire/database';
 import {ToastaConfig, ToastaService, ToastOptions} from 'ngx-toasta';
-
-import {ReviewPopupComponent} from '../Global/ReviewPopup/ReviewPopup.component';
-import {ConfirmationPopupComponent} from '../Global/ConfirmationPopup/ConfirmationPopup.component';
 
 interface Response {
     data: any;
@@ -66,30 +63,6 @@ export class EmbryoService {
 
         localStorage.setItem('cart_item', JSON.stringify(products));
         this.calculateLocalCartProdCounts();
-    }
-
-    public reviewPopup(singleProductDetails, reviews) {
-        let review: MatDialogRef<ReviewPopupComponent>;
-        const dialogConfig = new MatDialogConfig();
-        if (this.isDirectionRtl) {
-            dialogConfig.direction = 'rtl';
-        } else {
-            dialogConfig.direction = 'ltr';
-        }
-
-        review = this.dialog.open(ReviewPopupComponent, dialogConfig);
-        review.componentInstance.singleProductDetails = singleProductDetails;
-        review.componentInstance.reviews = reviews;
-
-        return review.afterClosed();
-    }
-
-    public confirmationPopup(message: string) {
-        let confirmationPopup: MatDialogRef<ConfirmationPopupComponent>;
-        confirmationPopup = this.dialog.open(ConfirmationPopupComponent);
-        confirmationPopup.componentInstance.message = message;
-
-        return confirmationPopup.afterClosed();
     }
 
     public getProducts() {
