@@ -36,8 +36,6 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {ToastaModule} from 'ngx-toasta';
 import {BidiModule} from '@angular/cdk/bidi';
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
 
 import {environment} from '../environments/environment';
@@ -66,11 +64,6 @@ import {PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface, PerfectScroll
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     suppressScrollX: true
 };
-
-/********** Custom option for ngx-translate ******/
-export function createTranslateLoader(http: HttpClient) {
-    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
 
 @NgModule({
     declarations: [
@@ -126,13 +119,6 @@ export function createTranslateLoader(http: HttpClient) {
         AngularFireDatabaseModule,
         ToastaModule.forRoot(),
         BidiModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: createTranslateLoader,
-                deps: [HttpClient]
-            }
-        }),
         SlickCarouselModule,
         PerfectScrollbarModule
     ],

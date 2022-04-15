@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {TranslateService} from '@ngx-translate/core';
 
 import {MenuItems} from '../../../Core/menu/menu-items/menu-items';
 
@@ -23,7 +22,7 @@ export class MenuComponent implements OnInit {
 
     expanded: boolean;
 
-    constructor(public menuItems: MenuItems, public router: Router, public translate: TranslateService) {
+    constructor(public menuItems: MenuItems, public router: Router) {
     }
 
     ngOnInit() {

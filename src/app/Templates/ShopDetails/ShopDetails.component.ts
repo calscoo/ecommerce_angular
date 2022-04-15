@@ -15,9 +15,6 @@ export class ShopDetailsComponent implements OnInit, OnChanges {
 
     mainImgPath: string;
     totalPrice: any;
-    colorsArray: string[] = ['Red', 'Blue', 'Yellow', 'Green'];
-    sizeArray: number[] = [36, 38, 40, 42, 44, 46, 48];
-    quantityArray: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     productReviews: any;
 
     constructor(private route: ActivatedRoute,
@@ -48,19 +45,6 @@ export class ShopDetailsComponent implements OnInit, OnChanges {
         document.querySelector('.border-active').classList.remove('border-active');
         this.mainImgPath = imgPath;
         document.getElementById(index + '_img').className += ' border-active';
-    }
-
-    public calculatePrice(detailData: any, value: any) {
-        detailData.quantity = value;
-        this.totalPrice = detailData.price * value;
-    }
-
-    public addToWishlist(value: any) {
-        this.embryoService.addToWishlist(value);
-    }
-
-    public addToCart(value: any) {
-        this.embryoService.addToCart(value);
     }
 
     public buyNow(value: any) {

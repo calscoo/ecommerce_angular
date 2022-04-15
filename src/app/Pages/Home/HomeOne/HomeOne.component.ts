@@ -1,4 +1,4 @@
-import {AfterViewChecked, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 import {EmbryoService} from '../../../Services/Embryo.service';
 
@@ -17,75 +17,6 @@ export class HomeoneComponent implements OnInit {
     };
     products: any;
     allProducts: any;
-    newProductsSliderData: any;
-    slideConfig = {
-        slidesToShow: 4,
-        slidesToScroll: 2,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        dots: false,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-
-    rtlSlideConfig = {
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        dots: false,
-        rtl: true,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
 
     constructor(public embryoService: EmbryoService) {
     }
@@ -126,41 +57,6 @@ export class HomeoneComponent implements OnInit {
                     break;
             }
         }
-    }
-
-    public onNewArrivalsSelectedTab(tabIndex) {
-        this.newProductsSliderData = null;
-        switch (tabIndex) {
-            case 0:
-                this.newProductsSliderData = this.allProducts;
-                break;
-
-            case 1:
-                this.newProductsSliderData = this.products.men;
-                break;
-
-            case 2:
-                this.newProductsSliderData = this.products.women;
-                break;
-
-            case 3:
-                this.newProductsSliderData = this.products.gadgets;
-                break;
-
-            default:
-                // code...
-                break;
-        }
-
-        return true;
-    }
-
-    public addToCart(value) {
-        this.embryoService.addToCart(value);
-    }
-
-    public addToWishlist(value) {
-        this.embryoService.addToWishlist(value);
     }
 
 }

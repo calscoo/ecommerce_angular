@@ -1,7 +1,7 @@
-<ng-container *ngIf="singleProductData">
+<ng-container *ngIf="product">
   <div class="inner-container">
     <div class="product-detail-page">
-      <embryo-ShopDetails [currency]="embryoService?.currency" [detailData]="singleProductData"></embryo-ShopDetails>
+      <embryo-ShopDetails [currency]="embryoService?.currency" [detailData]="product"></embryo-ShopDetails>
     </div>
   </div>
 </ng-container>
