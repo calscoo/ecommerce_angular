@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
-import {NgAisModule} from 'angular-instantsearch';
 import {FormsModule} from '@angular/forms';
 
 import {ProductsRoutes} from './Products.routing';
@@ -67,7 +66,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
         MatGridListModule,
         GlobalModule,
         TemplatesModule,
-        NgAisModule,
         FormsModule
     ],
     declarations: [
