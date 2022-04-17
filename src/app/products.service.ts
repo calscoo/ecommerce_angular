@@ -14,12 +14,12 @@ export class ProductsService {
       "name": "1test name",
       "price": 99.99,
       "description": "test description",
-      "image": "assets/images/items/item1/item1.png",
+      "image": "assets/images/items/item1.png",
       "image_gallery": [
-        "assets/images/items/item1/item1.png",
-        "assets/images/items/item1/item1.png",
-        "assets/images/items/item1/item1.png",
-        "assets/images/items/item1/item1.png"
+        "assets/images/items/item1.png",
+        "assets/images/items/item1.png",
+        "assets/images/items/item1.png",
+        "assets/images/items/item1.png"
       ],
     },
     {
@@ -27,12 +27,12 @@ export class ProductsService {
       "name": "2test name",
       "price": 99.99,
       "description": "test description",
-      "image": "assets/images/items/item2/item2.png",
+      "image": "assets/images/items/item2.png",
       "image_gallery": [
-        "assets/images/items/item2/item2.png",
-        "assets/images/items/item2/item2.png",
-        "assets/images/items/item2/item2.png",
-        "assets/images/items/item2/item2.png"
+        "assets/images/items/item2.png",
+        "assets/images/items/item2.png",
+        "assets/images/items/item2.png",
+        "assets/images/items/item2.png"
       ],
     }
   ];
