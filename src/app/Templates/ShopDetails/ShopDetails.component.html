@@ -41,8 +41,8 @@
                 <p>{{detailData?.description}}
                 </p>
               </div>
-              <div class="mb-5 detail-btns">
-                <button class="button-lg" mat-raised-button (click)="buyNow(detailData)">Buy Now</button>
+              <div class="mb-5 detail-btns">// this is where the detailData?.other thing is
+                <button class="button-lg" mat-raised-button (click)="purchase(detailData?.squareup_url)">Buy Now</button>
               </div>
             </div>
           </div>

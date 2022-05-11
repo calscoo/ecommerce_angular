@@ -14,6 +14,7 @@ export class ProductsService {
       "name": "1test name",
       "price": 99.99,
       "description": "test description",
+      "squareup_url": "https://www.google.com",
       "image": "assets/images/items/item1.png",
       "image_gallery": [
         "assets/images/items/item1.png",
@@ -27,6 +28,7 @@ export class ProductsService {
       "name": "2test name",
       "price": 99.99,
       "description": "test description",
+      "squareup_url": "https://www.google.com",
       "image": "assets/images/items/item2.png",
       "image_gallery": [
         "assets/images/items/item2.png",

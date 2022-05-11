@@ -47,9 +47,8 @@ export class ShopDetailsComponent implements OnInit, OnChanges {
         document.getElementById(index + '_img').className += ' border-active';
     }
 
-    public buyNow(value: any) {
-        this.embryoService.buyNow(value);
-        this.router.navigate(['/checkout']);
+    public purchase(url: any) {
+        window.location.href = url;
     }
 
 }
