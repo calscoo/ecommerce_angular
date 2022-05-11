@@ -12,7 +12,6 @@ export class ProductsService {
     {
       "id": "1",
       "name": "1test name",
-      "price": 99.99,
       "description": "test description",
       "squareup_url": "https://www.google.com",
       "image": "assets/images/items/item1.png",
@@ -20,13 +19,24 @@ export class ProductsService {
         "assets/images/items/item1.png",
         "assets/images/items/item1.png",
         "assets/images/items/item1.png",
-        "assets/images/items/item1.png"
+        "assets/images/items/item1.png",
+      ],
+      "variations": [
+        {
+          "size": "23 x 19",
+          "type": "medium",
+          "price": 99.99,
+        },
+        {
+          "size": "33 x 27",
+          "type": "large",
+          "price": 99.99,
+        },
       ],
     },
     {
       "id": "2",
       "name": "2test name",
-      "price": 99.99,
       "description": "test description",
       "squareup_url": "https://www.google.com",
       "image": "assets/images/items/item2.png",
@@ -34,9 +44,21 @@ export class ProductsService {
         "assets/images/items/item2.png",
         "assets/images/items/item2.png",
         "assets/images/items/item2.png",
-        "assets/images/items/item2.png"
+        "assets/images/items/item2.png",
       ],
-    }
+      "variations": [
+        {
+          "size": "23 x 19",
+          "type": "medium",
+          "price": 99.99,
+        },
+        {
+          "size": "33 x 27",
+          "type": "large",
+          "price": 99.99,
+        },
+      ],
+    },
   ];
 
   getProducts(){
