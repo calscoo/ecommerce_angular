@@ -11,8 +11,8 @@ export class ProductsService {
   products = [
     {
       "id": "1",
-      "name": "1test name",
-      "description": "test description",
+      "name": "1",
+      "description": "",
       "squareup_url": "https://www.google.com",
       "image": "assets/images/items/item1.png",
       "image_gallery": [
@@ -36,8 +36,8 @@ export class ProductsService {
     },
     {
       "id": "2",
-      "name": "2test name",
-      "description": "test description",
+      "name": "2",
+      "description": "",
       "squareup_url": "https://www.google.com",
       "image": "assets/images/items/item2.png",
       "image_gallery": [

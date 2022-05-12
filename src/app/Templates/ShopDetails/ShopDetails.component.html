@@ -38,11 +38,19 @@
                 <h4 class="accent-color">{{totalPrice | currency:currency}} </h4>
               </div>
               <div class="short-des">
-                <p>{{detailData?.description}}
-                </p>
+                <p style="font-size:larger;">{{detailData?.description}}</p>
+                <p style="font-size:larger;">All pieces are printed on fine art archival Esatin 300gram photo paper and rated for up to 150 years. Slightly textured, this surface mimics mediums once popular in darkroom printing.</p>
+                <ul type="square" *ngFor="let variation of detailData?.variations">
+                  <li><p>{{ variation.type }} ({{ variation.size }} inches)</p></li>
+                </ul>
               </div>
-              <div class="mb-5 detail-btns">
+              <div class="mb-3 detail-btns">
                 <button class="button-lg" mat-raised-button (click)="purchase(detailData?.squareup_url)">Buy Now</button>
+              </div>
+              <div class="short-des">
+                <p>1.5 inch white matte boarder included in sizing.</p>
+                <p>Prints are <b>NOT</b> framed, please have professionally framed.</p>
+                <p>Pricing is accurate for US customers. please contact <i>calebolson.media@gmail.com</i> for international shipping quotes.</p>
               </div>
             </div>
           </div>
