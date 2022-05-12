@@ -34,7 +34,7 @@
            </div>
             <div class="m-icon">
                 <button class="button-style" matTooltip="Details" mat-fab [routerLink]="['/shop', product?.id]"><i class="material-icons">manage_search</i> </button>
-                <button class="button-style" matTooltip="Buy Now" mat-fab [routerLink]="['/shop', product?.id]"><i class="material-icons">shopping_cart</i> </button>
+                <button class="button-style" matTooltip="Buy Now" mat-fab (click)="purchase(product?.squareup_url)"><i class="material-icons">shopping_cart</i> </button>
             </div>
         </mat-card-content>
      </mat-card>

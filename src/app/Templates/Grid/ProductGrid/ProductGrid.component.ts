@@ -41,4 +41,8 @@ export class ProductGridComponent implements OnInit {
         this.loaded = true;
     }
 
+    public purchase(url: any) {
+        window.location.href = url;
+    }
+
 }
