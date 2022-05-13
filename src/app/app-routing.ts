@@ -1,4 +1,7 @@
-import {Routes} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { CommonModule, } from '@angular/common';
+import { BrowserModule  } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
 
 import {MainComponent} from './Main/Main.component';
 import {HomeoneComponent} from './Pages/Home/HomeOne/HomeOne.component';
@@ -33,3 +36,16 @@ export const AppRoutes: Routes = [
         redirectTo: 'not-found'
     }
 ];
+
+@NgModule({
+    imports: [
+        CommonModule,
+        BrowserModule,
+        RouterModule.forRoot(AppRoutes, {
+            useHash: true
+        })
+    ],
+    exports: [
+    ],
+})
+export class AppRoutingModule { }
