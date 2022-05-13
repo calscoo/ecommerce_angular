@@ -37,6 +37,7 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {ToastaModule} from 'ngx-toasta';
 import {BidiModule} from '@angular/cdk/bidi';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import {environment} from '../environments/environment';
 
@@ -128,6 +129,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         {
             provide: PERFECT_SCROLLBAR_CONFIG,
             useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+        },
+        {
+            provide: LocationStrategy,
+            useClass: HashLocationStrategy
         }
     ],
     exports: [
